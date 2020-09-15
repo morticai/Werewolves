@@ -14,7 +14,6 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 --[[
 Basic game states allow a component to handle state replication and other components to set or ask the current state of
 the game. The game can be in a state without a duration. In this case, GetTimeRemainingInState() should return nil.
@@ -22,7 +21,6 @@ Game state managers broadcast the following event whenever game state or game st
 
 GameStateChanged(int oldState, int newState, bool stateHasDuration, float stateEndTime)
 --]]
-
 local API = {}
 
 API.GAME_STATE_LOBBY = 0
@@ -32,7 +30,11 @@ API.GAME_STATE_ROUND_END = 2
 -- nil RegisterGameStateManager(function, function, function, function) [Server]
 -- Called once by a manager component that at minimum handles replication.
 -- Functions passed in must match signatures of the functions below.
-function API.RegisterGameStateManagerServer(stateGetter, stateTimeGetter, stateSetter, stateTimeSetter)
+function API.RegisterGameStateManagerServer(
+	stateGetter,
+	stateTimeGetter,
+	stateSetter,
+	stateTimeSetter)
 	if _G.APIBasicGameState and _G.APIBasicGameState.registeredOnServer then
 		error("A game cannot have multiple game state managers")
 	end
@@ -49,7 +51,7 @@ end
 -- Called once by a manager component that at minimum handles replication.
 -- Functions passed in must match signatures of the functions below.
 function API.RegisterGameStateManagerClient(stateGetter, stateTimeGetter)
-	if _G.APIBasicGameState and _G.APIBasicGameState.registeredOnClient  then
+	if _G.APIBasicGameState and _G.APIBasicGameState.registeredOnClient then
 		error("A game cannot have multiple game state managers")
 	end
 

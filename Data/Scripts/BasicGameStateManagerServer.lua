@@ -60,6 +60,7 @@ function GetTimeRemainingInState()
 	return math.max(endTime - time(), 0.0)
 end
 
+
 -- nil SetGameState()
 -- Sets the state and configures timing. Passed to API
 function SetGameState(newState)
@@ -73,6 +74,7 @@ function SetGameState(newState)
 	elseif newState == ABGS.GAME_STATE_ROUND then
 		stateHasduration = ROUND_HAS_DURATION
 		stateDuration = ROUND_DURATION
+		script:SetNetworkedCustomProperty("ShipHealth", 50)
 	elseif newState == ABGS.GAME_STATE_ROUND_END then
 		stateHasduration = ROUND_END_HAS_DURATION
 		stateDuration = ROUND_END_DURATION

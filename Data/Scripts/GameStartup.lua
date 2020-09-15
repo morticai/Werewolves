@@ -6,38 +6,50 @@
 -- Requires
 -------------------------------------------------------------------------------
 local ABGS = require(script:GetCustomProperty("API"))
+local RES = require(script:GetCustomProperty("GameResources"))
+local UTIL = require(script:GetCustomProperty("GameUTIL"))
 -------------------------------------------------------------------------------
 -- Objects
 -------------------------------------------------------------------------------
-local Werewolvespawn = script:GetCustomProperty("WerewolveSpawns"):WaitForObject()
+local WerewolfSpawn = script:GetCustomProperty("WerewolfSpawn"):WaitForObject()
 local HumanSpawn = script:GetCustomProperty("HumanSpawns"):WaitForObject()
 -------------------------------------------------------------------------------
--- Variables
+-- Constants
+-------------------------------------------------------------------------------
+local WEREWOLF_SPEED, HUMAN_SPEED = 1240, 640
+local HUMAN_TEAM, WEREWOLF_TEAM = 1, 2
+local HUMAN_SPAWN_MULTIPLIER = 3
+local SHOULD_DIE_JOINED_LATE = false -- TODO once game logic is solidified remove
+-------------------------------------------------------------------------------
+-- Variables -- TODO changes  these to custom properties
 -------------------------------------------------------------------------------
 local Werewolves = {}
-local Werewolvespeed, RunnerSpeed = 1240, 640
 local currentWerewolves, currentHumans = 0, 0
-local humanMultiplier = 4
-local isDeathOnLateJoin = false
 -------------------------------------------------------------------------------
 -- local functions
 -------------------------------------------------------------------------------
--- @params value - currentWerewolves or tbl count
--- Returns true if a Werewolve is needed
-local function ShouldSpawnWerewolve(value)
-	return value >= 0 and (value * humanMultiplier) < currentHumans
+-- @param value(int) - currentWerewolves or tbl count
+-- @return true if a Werewolf is needed
+local function ShouldSpawnWerewolf(value)
+	return value >= 0 and (value * HUMAN_SPAWN_MULTIPLIER) < currentHumans
+end
+-- @param value(int) - currentWerewolves or tbl count
+-- @return true if a Werewolve is needed
+local function isEnoughWerewolves(value)
+	return (currentHumans / HUMAN_SPAWN_MULTIPLIER) < value
 end
 
 -------------------------------------------------------------------------------
 -- Public Functions
 -------------------------------------------------------------------------------
 function OnPlayerJoined(Player)
-	if ShouldSpawnWerewolve(currentWerewolves) then
-		ChangePlayerToWerewolve(Player)
+	if ShouldSpawnWerewolf(currentWerewolves) then
+		ChangePlayerToWerewolf(Player)
 	else
 		ChangePlayerToHuman(Player)
-		if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and isDeathOnLateJoin then
+		if SHOULD_DIE_JOINED_LATE and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
 			Player:Die()
+			Task.Wait(0.1) -- Wait 1 server tick
 			Player.deaths = 0
 		end
 	end
@@ -45,90 +57,77 @@ end
 
 function OnGameStateChanged(oldState, newState, hasDuration, endTime)
 	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-		currentWerewolves, currentHumans = 0, 0
-		for _, player in ipairs(Game.GetPlayers()) do
-			player:Die()
-			Task.Wait(0.1)
-			player.kills = 0
-			player.deaths = 0
-			RemovePlayerEquipment(player)
-			ChangePlayerToHuman(player)
-		end
 		Game.ResetTeamScores()
-		FindWerewolve()
+		ResetAllPlayers()
 	end
 end
 
-function RemoveEquipment(player)
-	for _, equipment in pairs(player:GetEquipment()) do
-		if equipment.socket == "right_prop" then
-			equipment:Unequip()
-			if Object.IsValid(equipment) then
-				equipment:Destroy()
-			end
-		end
-	end
-end
-
-function FindWerewolve()
+function FindWerewolf()
 	local tempTbl = {}
-	local enoughWerewolves = true
 	for Player, Bool in pairs(Werewolves) do
 		if Bool == false then
 			tempTbl[#tempTbl + 1] = Player
 		end
 	end
-	if ShouldSpawnWerewolve(#tempTbl) then
+	if isEnoughWerewolves(#tempTbl) then
 		local shuffled = {}
-		for i, v in ipairs(tempTbl) do
+		for _, v in ipairs(tempTbl) do
 			local pos = math.random(1, #shuffled + 1)
 			shuffled[pos] = v
 		end
-		for i, Player in ipairs(shuffled) do
-			if ShouldSpawnWerewolve(currentWerewolves) then
-				ChangePlayerToWerewolve(Player)
+		for _, Player in ipairs(shuffled) do
+			if ShouldSpawnWerewolf(currentWerewolves) then
+				ChangePlayerToWerewolf(Player)
 				currentHumans = currentHumans - 1
 			end
 		end
+	else
+		ResetAllPlayers()
 	end
 end
 
-function TeamBalance(Player)
-	if ShouldSpawnWerewolve(currentWerewolves) then
-		ChangePlayerToWerewolve(Player)
+function BalanceTeam(Player)
+	if ShouldSpawnWerewolf(currentWerewolves) then
+		ChangePlayerToWerewolf(Player)
 	else
-		if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-			Player:Die()
-			Player.deaths = 0
-		end
 		ChangePlayerToHuman(Player)
 	end
 end
 
-function ChangePlayerToWerewolve(Player)
-	Player:Respawn()
+function ChangePlayerToWerewolf(Player)
 	Werewolves[Player] = true
-	Player.team = 2
-	Player:SetWorldPosition(Werewolvespawn:GetWorldPosition())
-	Player.maxWalkSpeed = Werewolvespeed
+	Player.team = WEREWOLF_TEAM
+	Player.maxWalkSpeed = WEREWOLF_SPEED
 	currentWerewolves = currentWerewolves + 1
+	Player:Respawn()
+	Player:SetWorldPosition(WerewolfSpawn:GetWorldPosition())
 end
 
 function ChangePlayerToHuman(Player)
-	Player:Respawn()
 	Werewolves[Player] = false
-	Player.team = 1
-	Player.maxWalkSpeed = RunnerSpeed
+	Player.team = HUMAN_TEAM
+	Player.maxWalkSpeed = HUMAN_SPEED
 	currentHumans = currentHumans + 1
+	Player:Respawn()
 	Player:SetWorldPosition(HumanSpawn:GetWorldPosition())
 end
 
+function ResetAllPlayers()
+	currentWerewolves, currentHumans = 0, 0
+	for _, player in ipairs(Game.GetPlayers()) do
+		UTIL.RemovePlayerEquipment(player)
+		ChangePlayerToHuman(player)
+	end
+	FindWerewolf()
+end
+
+--TODO Working but could be improved
 function OnPlayerLeft(DisconnectedPlayer)
 	local shouldResetRound = true
 	local currentState = ABGS.GetGameState()
-	if DisconnectedPlayer.team == 1 and currentState == ABGS.GAME_STATE_ROUND then
+	if DisconnectedPlayer.team == HUMAN_TEAM and currentState == ABGS.GAME_STATE_ROUND then
 		for _, player in ipairs(Game.GetPlayers()) do
-			if player.team == 1 and player ~= DisconnectedPlayer then
+			if player.team == HUMAN_TEAM and player ~= DisconnectedPlayer then
 				shouldResetRound = false
 			end
 		end
@@ -136,9 +135,9 @@ function OnPlayerLeft(DisconnectedPlayer)
 	end
 	if shouldResetRound and currentState == ABGS.GAME_STATE_ROUND then
 		ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
-	elseif DisconnectedPlayer.team == 2 and currentState == ABGS.GAME_STATE_ROUND and currentWerewolves == 1 then
+	elseif DisconnectedPlayer.team == WEREWOLF_TEAM and currentState == ABGS.GAME_STATE_ROUND and currentWerewolves == 1 then
 		currentWerewolves = currentWerewolves - 1
-		FindWerewolve()
+		FindWerewolf()
 	end
 	Werewolves[DisconnectedPlayer] = nil
 end
