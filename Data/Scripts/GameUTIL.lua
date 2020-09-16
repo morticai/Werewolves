@@ -11,6 +11,14 @@ local RES = require(script:GetCustomProperty("GameResources"))
 -------------------------------------------------------------------------------
 -- Public Functions
 -------------------------------------------------------------------------------
+
+--@param object Player
+--@param in id
+function API.SpawnPlayerEquipment(Player, id)
+    local Equipment = World.SpawnAsset(id)
+    Equipment:Equip(Player)
+end
+
 --@param object Player
 function API.RemoveAllPlayerEquipment(Player)
     for _, equipment in pairs(Player:GetEquipment()) do
@@ -19,6 +27,7 @@ function API.RemoveAllPlayerEquipment(Player)
             equipment:Destroy()
         end
     end
+    Player:SetVisibility(true)
 end
 
 --@param object Player

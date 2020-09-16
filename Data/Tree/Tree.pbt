@@ -20,9 +20,6 @@ Objects {
   ChildIds: 5214476104957917529
   ChildIds: 16240810510747695301
   ChildIds: 1589494968194899612
-  ChildIds: 10925967979970616295
-  ChildIds: 4574843113903935033
-  ChildIds: 15146541051615225545
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,141 +29,6 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 15146541051615225545
-  Name: "OxygenTanks"
-  Transform {
-    Location {
-      X: 1305.44507
-      Y: 27.2276058
-      Z: 123.109085
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  ChildIds: 6529460574443190872
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6529460574443190872
-  Name: "O2Farms"
-  Transform {
-    Location {
-      Y: 156.661667
-    }
-    Rotation {
-      Yaw: 179.999954
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15146541051615225545
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "O2Farms"
-  }
-  InstanceHistory {
-    SelfId: 6529460574443190872
-    SubobjectId: 14629422621009208348
-    InstanceId: 6974912833995369361
-    TemplateId: 2448317707192933349
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 4574843113903935033
-  Name: "SpaceWerewolf"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4369523751008722125
-      value {
-        Overrides {
-          Name: "Name"
-          String: "SpaceWerewolf"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -756.340393
-            Y: -140.114365
-            Z: 2.28881836e-05
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 17210344624023882587
-    }
-  }
-}
-Objects {
-  Id: 10925967979970616295
-  Name: "Game State Display"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11397727575064778677
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Game State Display"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -287.023682
-            Y: -671.524
-            Z: 2.28881836e-05
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 14657766165477448216
-    }
   }
 }
 Objects {
@@ -268,13 +130,13 @@ Objects {
     Overrides {
       Name: "cs:BrokenStatic"
       AssetReference {
-        Id: 9933724773230924450
+        Id: 12467124093922545878
       }
     }
     Overrides {
       Name: "cs:RepairedStatic"
       AssetReference {
-        Id: 12041487697068245355
+        Id: 16597662217998872952
       }
     }
     Overrides {
@@ -331,15 +193,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:HumanSpawns"
+      Name: "cs:SpawnPoints"
       ObjectReference {
-        SelfId: 16813558807825262224
-      }
-    }
-    Overrides {
-      Name: "cs:WerewolfSpawn"
-      ObjectReference {
-        SelfId: 18133489436946193462
+        SelfId: 6440809903796681665
       }
     }
   }
@@ -378,32 +234,6 @@ Objects {
   ParentId: 4781671109827199097
   ChildIds: 12168757016273559744
   ChildIds: 10005074784157121906
-  ChildIds: 228878820155061214
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 228878820155061214
-  Name: "Group"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4060600849257143932
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -814,6 +644,7 @@ Objects {
   }
   ParentId: 4781671109827199097
   ChildIds: 8927286325345831043
+  ChildIds: 10925967979970616295
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -822,6 +653,53 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 10925967979970616295
+  Name: "Game State Display"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5610376754213879679
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11397727575064778677
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Game State Display"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -287.023682
+            Y: -671.524
+            Z: 2.28881836e-05
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14657766165477448216
+    }
   }
 }
 Objects {
@@ -889,6 +767,7 @@ Objects {
   ChildIds: 4106633971046351476
   ChildIds: 6440809903796681665
   ChildIds: 14713340454944924967
+  ChildIds: 15146541051615225545
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -899,10 +778,278 @@ Objects {
     IsDefault: true
     GameSettings {
       RagdollOnDeath: true
+      EnablePlayerStorage: true
       ChatMode {
         Value: "mc:echatmode:teamandall"
       }
+      EnablePlayModeProfiler: true
     }
+  }
+}
+Objects {
+  Id: 15146541051615225545
+  Name: "OxygenTankSpawns"
+  Transform {
+    Location {
+      X: 1305.44507
+      Y: 27.2276
+      Z: 123.109085
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7367735074338159388
+  ChildIds: 6529460574443190872
+  ChildIds: 10615615352480885526
+  ChildIds: 2036175467553947944
+  ChildIds: 8320721676392308993
+  ChildIds: 3216137589772068672
+  ChildIds: 12472514998206281714
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12472514998206281714
+  Name: "O2Farms"
+  Transform {
+    Location {
+      X: -1420.70117
+      Y: -2098.71558
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 3216137589772068672
+  Name: "O2Farms"
+  Transform {
+    Location {
+      X: -2545.14795
+      Y: -2098.71558
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms_1"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 8320721676392308993
+  Name: "O2Farms"
+  Transform {
+    Location {
+      X: -2545.14795
+      Y: -1000.44257
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms_2"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 2036175467553947944
+  Name: "O2Farms"
+  Transform {
+    Location {
+      X: -868.889893
+      Y: 909.02655
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms_3"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 10615615352480885526
+  Name: "O2Farms"
+  Transform {
+    Location {
+      Y: -423.835754
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms_4"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 6529460574443190872
+  Name: "O2Farms"
+  Transform {
+    Location {
+      Y: 156.661667
+      Z: -126.924744
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15146541051615225545
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "O2Farms_5"
+  }
+  InstanceHistory {
+    SelfId: 6529460574443190872
+    SubobjectId: 14629422621009208348
+    InstanceId: 6974912833995369361
+    TemplateId: 2448317707192933349
+    WasRoot: true
   }
 }
 Objects {
@@ -1081,7 +1228,7 @@ Objects {
 }
 Objects {
   Id: 6440809903796681665
-  Name: "Spawns"
+  Name: "SpawnPoints"
   Transform {
     Location {
       Y: 143.470764
@@ -1096,8 +1243,16 @@ Objects {
     }
   }
   ParentId: 7367735074338159388
-  ChildIds: 18133489436946193462
   ChildIds: 16813558807825262224
+  ChildIds: 1248381507528441079
+  ChildIds: 7068653236390506049
+  ChildIds: 2273475663834317166
+  ChildIds: 2915564883365919075
+  ChildIds: 5492348193579395335
+  ChildIds: 9844096204736188045
+  ChildIds: 4345434376969589280
+  ChildIds: 5050724800628480244
+  ChildIds: 5272190665086412565
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1109,11 +1264,12 @@ Objects {
   }
 }
 Objects {
-  Id: 16813558807825262224
-  Name: "HumanSpawn"
+  Id: 5272190665086412565
+  Name: "SpawnPoint"
   Transform {
     Location {
-      Y: -143.470764
+      X: 318.874146
+      Y: -154.071655
     }
     Rotation {
     }
@@ -1137,11 +1293,12 @@ Objects {
   }
 }
 Objects {
-  Id: 18133489436946193462
-  Name: "WerewolveSpawn"
+  Id: 5050724800628480244
+  Name: "SpawnPoint"
   Transform {
     Location {
-      Y: 143.470764
+      X: 318.874146
+      Y: 52.0203247
     }
     Rotation {
     }
@@ -1161,7 +1318,234 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   PlayerSpawnPoint {
-    TeamInt: 2
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 4345434376969589280
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      X: 318.874146
+      Y: 287.124268
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 9844096204736188045
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      X: 318.874146
+      Y: 525.953308
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 5492348193579395335
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      X: 318.874146
+      Y: 760.709351
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 2915564883365919075
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      Y: 760.709351
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 2273475663834317166
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      Y: 503.443481
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 7068653236390506049
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      Y: 281.738281
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 1248381507528441079
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      Y: 66.1302643
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+  }
+}
+Objects {
+  Id: 16813558807825262224
+  Name: "SpawnPoint"
+  Transform {
+    Location {
+      Y: -143.470764
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6440809903796681665
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
   }
 }
 Objects {

@@ -1,12 +1,12 @@
 ﻿Assets {
-  Id: 2448317707192933349
+  Id: 16940357144840592715
   Name: "O2Farms"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 14629422621009208348
+      RootId: 11153379120817566769
       Objects {
-        Id: 14629422621009208348
+        Id: 11153379120817566769
         Name: "O2Farms"
         Transform {
           Scale {
@@ -16,24 +16,22 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3883876626642994498
-        ChildIds: 5027707769586527830
+        ChildIds: 2059150388724307694
+        ChildIds: 10419427016865325325
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Folder {
-          IsFilePartition: true
+        NetworkContext {
         }
       }
       Objects {
-        Id: 3883876626642994498
+        Id: 2059150388724307694
         Name: "O2Farm_Repaired"
         Transform {
           Location {
-            X: 189.557
           }
           Rotation {
           }
@@ -43,20 +41,19 @@
             Z: 1
           }
         }
-        ParentId: 14629422621009208348
-        ChildIds: 7435522381321974492
-        ChildIds: 1955165577941803307
-        ChildIds: 8463916829469244998
-        ChildIds: 15694879155865859798
-        ChildIds: 10097672297458593852
-        ChildIds: 13899575713500300461
-        ChildIds: 12136380019581035870
-        ChildIds: 17071052154580834640
-        ChildIds: 8391544958623754263
-        ChildIds: 8116843329450526095
-        ChildIds: 1436659813366780484
-        ChildIds: 10923452949653613601
-        ChildIds: 12774367928284367138
+        ParentId: 11153379120817566769
+        ChildIds: 7846763385268385454
+        ChildIds: 456967487565715635
+        ChildIds: 6813224527234482936
+        ChildIds: 14691896739229966129
+        ChildIds: 11562051487637972528
+        ChildIds: 8561750753357994685
+        ChildIds: 10778721124990485600
+        ChildIds: 6925912965379142307
+        ChildIds: 9776047937915197207
+        ChildIds: 16602516996848421747
+        ChildIds: 6152213560107816061
+        ChildIds: 14775910086342278057
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -68,12 +65,12 @@
         }
       }
       Objects {
-        Id: 7435522381321974492
+        Id: 7846763385268385454
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
             Y: -69.6999512
-            Z: -95.1887283
+            Z: 31.9784393
           }
           Rotation {
             Pitch: 0.000375660369
@@ -86,7 +83,7 @@
             Z: 0.318226367
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -112,8 +109,8 @@
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.0185430124
-              G: 0.559999943
+              R: 0.175496697
+              G: 0.5
               A: 1
             }
           }
@@ -140,12 +137,12 @@
         }
       }
       Objects {
-        Id: 1955165577941803307
+        Id: 456967487565715635
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: -73.1424255
+            Z: 54.0247345
           }
           Rotation {
           }
@@ -155,7 +152,7 @@
             Z: 0.30526346
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -195,12 +192,12 @@
         }
       }
       Objects {
-        Id: 8463916829469244998
+        Id: 6813224527234482936
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 25.6995544
+            Z: 152.866714
           }
           Rotation {
           }
@@ -210,7 +207,7 @@
             Z: 2.53928876
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -250,12 +247,12 @@
         }
       }
       Objects {
-        Id: 15694879155865859798
+        Id: 14691896739229966129
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 224.930267
+            Z: 352.097412
           }
           Rotation {
             Yaw: -45
@@ -266,7 +263,7 @@
             Z: 0.203495905
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -297,12 +294,12 @@
         }
       }
       Objects {
-        Id: 10097672297458593852
-        Name: "Tray"
+        Id: 11562051487637972528
+        Name: "TrayStack"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 26.8575745
+            Z: 154.024734
           }
           Rotation {
           }
@@ -312,14 +309,12 @@
             Z: 1
           }
         }
-        ParentId: 3883876626642994498
-        ChildIds: 8189901203534726957
-        ChildIds: 601860199970373114
-        ChildIds: 7935589442603136314
-        ChildIds: 16508956106905797714
-        ChildIds: 2207498374580843912
-        ChildIds: 9668069497330760726
-        ChildIds: 661666392850277198
+        ParentId: 2059150388724307694
+        ChildIds: 2514861433192288454
+        ChildIds: 14656507704317541279
+        ChildIds: 1418852839608281883
+        ChildIds: 12588800946419675353
+        ChildIds: 6778298828649216530
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -331,7 +326,39 @@
         }
       }
       Objects {
-        Id: 8189901203534726957
+        Id: 2514861433192288454
+        Name: "Tray"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11562051487637972528
+        ChildIds: 4597727490880234961
+        ChildIds: 833271375990479310
+        ChildIds: 6148074606201662374
+        ChildIds: 5426798808251673116
+        ChildIds: 3406784674107258432
+        ChildIds: 4693366464530194872
+        ChildIds: 2694980839509441511
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4597727490880234961
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
@@ -344,7 +371,7 @@
             Z: 0.0436299406
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -400,7 +427,7 @@
         }
       }
       Objects {
-        Id: 601860199970373114
+        Id: 833271375990479310
         Name: "Fern 03"
         Transform {
           Location {
@@ -416,7 +443,7 @@
             Z: 0.230214551
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -439,7 +466,7 @@
         }
       }
       Objects {
-        Id: 7935589442603136314
+        Id: 6148074606201662374
         Name: "Fern 03"
         Transform {
           Location {
@@ -457,7 +484,7 @@
             Z: 0.18247208
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -480,7 +507,7 @@
         }
       }
       Objects {
-        Id: 16508956106905797714
+        Id: 5426798808251673116
         Name: "Fern 03"
         Transform {
           Location {
@@ -498,7 +525,7 @@
             Z: 0.203744233
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -521,7 +548,7 @@
         }
       }
       Objects {
-        Id: 2207498374580843912
+        Id: 3406784674107258432
         Name: "Fern 03"
         Transform {
           Location {
@@ -539,7 +566,7 @@
             Z: 0.176165625
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -562,7 +589,7 @@
         }
       }
       Objects {
-        Id: 9668069497330760726
+        Id: 4693366464530194872
         Name: "Fern 03"
         Transform {
           Location {
@@ -580,7 +607,7 @@
             Z: 0.114350572
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -603,7 +630,7 @@
         }
       }
       Objects {
-        Id: 661666392850277198
+        Id: 2694980839509441511
         Name: "Fern 03"
         Transform {
           Location {
@@ -621,7 +648,7 @@
             Z: 0.20342131
           }
         }
-        ParentId: 10097672297458593852
+        ParentId: 2514861433192288454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -644,12 +671,1083 @@
         }
       }
       Objects {
-        Id: 13899575713500300461
+        Id: 14656507704317541279
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 50
+          }
+          Rotation {
+            Yaw: 44.9999924
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11562051487637972528
+        ChildIds: 6710524495208905084
+        ChildIds: 15392616691225300569
+        ChildIds: 7663996731729767570
+        ChildIds: 2967637532144434834
+        ChildIds: 12521229670056966562
+        ChildIds: 10294517889957685079
+        ChildIds: 14762877960448434535
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6710524495208905084
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 14656507704317541279
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15392616691225300569
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7663996731729767570
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2967637532144434834
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12521229670056966562
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10294517889957685079
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14762877960448434535
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 14656507704317541279
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1418852839608281883
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+            Yaw: 89.9999542
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11562051487637972528
+        ChildIds: 4804098482659856351
+        ChildIds: 7255341971833816528
+        ChildIds: 7751115099767619059
+        ChildIds: 15345691697627103615
+        ChildIds: 13671461157202776406
+        ChildIds: 11203615386528601569
+        ChildIds: 14845930531886740479
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4804098482659856351
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 1418852839608281883
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7255341971833816528
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7751115099767619059
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15345691697627103615
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13671461157202776406
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11203615386528601569
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14845930531886740479
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 1418852839608281883
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12588800946419675353
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 150
+          }
+          Rotation {
+            Yaw: 134.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11562051487637972528
+        ChildIds: 12986461066292617140
+        ChildIds: 5508158250106310721
+        ChildIds: 16883186771550644500
+        ChildIds: 4146115008498961532
+        ChildIds: 1968614480115541083
+        ChildIds: 1925456889414060460
+        ChildIds: 12989646861394423013
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12986461066292617140
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 12588800946419675353
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5508158250106310721
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16883186771550644500
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4146115008498961532
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1968614480115541083
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1925456889414060460
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12989646861394423013
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 12588800946419675353
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6778298828649216530
+        Name: "TraySpin"
+        Transform {
+          Location {
+            X: -300
+            Y: -1252.27649
+            Z: -149.35437
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11562051487637972528
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2665762005230243597
+          }
+        }
+      }
+      Objects {
+        Id: 8561750753357994685
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 37.4626694
+            Z: 164.629837
           }
           Rotation {
           }
@@ -659,7 +1757,7 @@
             Z: 1.89211583
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -707,1057 +1805,13 @@
         }
       }
       Objects {
-        Id: 12136380019581035870
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 76.8575745
-          }
-          Rotation {
-            Yaw: 44.9999924
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3883876626642994498
-        ChildIds: 4066495376558746949
-        ChildIds: 4476174030022759650
-        ChildIds: 18134556209710077087
-        ChildIds: 2680499083707456307
-        ChildIds: 17748483253252789004
-        ChildIds: 16543113297294219325
-        ChildIds: 15509940460764505128
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4066495376558746949
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 12136380019581035870
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4476174030022759650
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18134556209710077087
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2680499083707456307
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17748483253252789004
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16543113297294219325
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15509940460764505128
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 12136380019581035870
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17071052154580834640
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 126.857574
-          }
-          Rotation {
-            Yaw: 89.9999542
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3883876626642994498
-        ChildIds: 9763955465458765248
-        ChildIds: 2764687746608024180
-        ChildIds: 1734716120811192049
-        ChildIds: 9202999442536851516
-        ChildIds: 10888358928091992323
-        ChildIds: 5871576243071448813
-        ChildIds: 10926716927446284256
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9763955465458765248
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 17071052154580834640
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2764687746608024180
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1734716120811192049
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9202999442536851516
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10888358928091992323
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5871576243071448813
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10926716927446284256
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 17071052154580834640
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8391544958623754263
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 176.857574
-          }
-          Rotation {
-            Yaw: 134.999954
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3883876626642994498
-        ChildIds: 13274858673323096225
-        ChildIds: 16726322060486778181
-        ChildIds: 17588935801991252826
-        ChildIds: 7001285726987715695
-        ChildIds: 6282669970073371994
-        ChildIds: 12049087771520615116
-        ChildIds: 10169142544117303541
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 13274858673323096225
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 8391544958623754263
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16726322060486778181
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17588935801991252826
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7001285726987715695
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6282669970073371994
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12049087771520615116
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10169142544117303541
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 8391544958623754263
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8116843329450526095
+        Id: 10778721124990485600
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            X: 154.264221
+            X: 154.264191
             Y: -4.95751953
-            Z: -15.4702911
+            Z: 111.696884
           }
           Rotation {
             Pitch: -3.05175781e-05
@@ -1770,7 +1824,7 @@
             Z: 1.20239437
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1830,13 +1884,13 @@
         }
       }
       Objects {
-        Id: 1436659813366780484
+        Id: 6925912965379142307
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            X: 154.264221
+            X: 154.264191
             Y: -24.9874268
-            Z: -35.6508713
+            Z: 91.5163116
           }
           Rotation {
             Pitch: -3.05175781e-05
@@ -1849,7 +1903,7 @@
             Z: 1
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail2:id"
@@ -1879,20 +1933,17 @@
             }
           }
           Overrides {
-            Name: "ma:Shared_Detail3:color"
+            Name: "ma:Shared_Detail2:color"
             Color {
-              R: 0.445562661
-              G: 1
-              B: 0.0899999738
+              R: 0.175496638
+              G: 0.5
               A: 1
             }
           }
           Overrides {
-            Name: "ma:Shared_Detail2:color"
-            Color {
-              R: 0.175496697
-              G: 0.5
-              A: 1
+            Name: "ma:Shared_Detail3:id"
+            AssetReference {
+              Id: 5861378696068657309
             }
           }
         }
@@ -1918,15 +1969,15 @@
         }
       }
       Objects {
-        Id: 10923452949653613601
+        Id: 9776047937915197207
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            Z: 260.163574
+            Z: 387.33075
           }
           Rotation {
             Pitch: -9.15527344e-05
-            Yaw: 179.999573
+            Yaw: 179.999542
             Roll: -90.0008545
           }
           Scale {
@@ -1935,7 +1986,7 @@
             Z: 0.473867774
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1972,17 +2023,17 @@
         }
       }
       Objects {
-        Id: 12774367928284367138
+        Id: 16602516996848421747
         Name: "Spotlight"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 377.832855
+            Z: 505
           }
           Rotation {
             Pitch: -90
-            Yaw: 25.2393837
-            Roll: -25.2394104
+            Yaw: 1.68761575
+            Roll: -1.68765259
           }
           Scale {
             X: 1
@@ -1990,7 +2041,7 @@
             Z: 1
           }
         }
-        ParentId: 3883876626642994498
+        ParentId: 2059150388724307694
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2030,11 +2081,12 @@
         }
       }
       Objects {
-        Id: 5027707769586527830
-        Name: "O2Farm_Broken"
+        Id: 6152213560107816061
+        Name: "Sci-fi Scanning Ray Beam Aura Loop 01 SFX"
         Transform {
           Location {
-            X: -189.557
+            Y: -97.3884277
+            Z: 255.429077
           }
           Rotation {
           }
@@ -2044,22 +2096,93 @@
             Z: 1
           }
         }
-        ParentId: 14629422621009208348
-        ChildIds: 16828864165942429310
-        ChildIds: 14731652767657861097
-        ChildIds: 14574829117239099761
-        ChildIds: 7836954063016267316
-        ChildIds: 5286181186750240159
-        ChildIds: 8556577323144166239
-        ChildIds: 17129226449779229680
-        ChildIds: 15521655200411428833
-        ChildIds: 10058198024079606921
-        ChildIds: 13131694552507157131
-        ChildIds: 3685785633169606791
-        ChildIds: 5712710667653248609
-        ChildIds: 4586137556789091628
-        ChildIds: 5998192266791165080
-        ChildIds: 12525095718830538129
+        ParentId: 2059150388724307694
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 11862530566950943688
+          }
+          AutoPlay: true
+          Repeat: true
+          Volume: 1
+          Falloff: 3000
+          Radius: 200
+          EnableOcclusion: true
+          FadeInTime: 3
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 14775910086342278057
+        Name: "Sci-fi Robot Machinery Transform 01 SFX"
+        Transform {
+          Location {
+            Y: -97.3884277
+            Z: 255.429077
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2059150388724307694
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 2509442758212234458
+          }
+          AutoPlay: true
+          Transient: true
+          Volume: 1
+          Falloff: -1
+          Radius: 400
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 10419427016865325325
+        Name: "O2Farm_Broken"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11153379120817566769
+        ChildIds: 10079310989737938979
+        ChildIds: 347861126226853087
+        ChildIds: 4840234064322589155
+        ChildIds: 1637002861832283093
+        ChildIds: 8214728633666308226
+        ChildIds: 554876351181447573
+        ChildIds: 14406131302592399982
+        ChildIds: 385145592608493642
+        ChildIds: 7763870578944531052
+        ChildIds: 4917290174431478469
+        ChildIds: 17740443275075407170
+        ChildIds: 11693910331792288291
+        ChildIds: 16000466786058347904
+        ChildIds: 17505726009483999028
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2071,12 +2194,12 @@
         }
       }
       Objects {
-        Id: 16828864165942429310
+        Id: 10079310989737938979
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
             Y: -69.6999512
-            Z: -95.1887283
+            Z: 33.0324326
           }
           Rotation {
             Pitch: 0.000375660369
@@ -2089,7 +2212,7 @@
             Z: 0.318226367
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -2135,12 +2258,12 @@
         }
       }
       Objects {
-        Id: 14731652767657861097
+        Id: 347861126226853087
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: -73.1424255
+            Z: 55.078743
           }
           Rotation {
           }
@@ -2150,7 +2273,7 @@
             Z: 0.30526346
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2190,12 +2313,12 @@
         }
       }
       Objects {
-        Id: 14574829117239099761
+        Id: 4840234064322589155
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 25.6995544
+            Z: 153.920715
           }
           Rotation {
           }
@@ -2205,7 +2328,7 @@
             Z: 2.53928876
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2245,12 +2368,12 @@
         }
       }
       Objects {
-        Id: 7836954063016267316
+        Id: 1637002861832283093
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 224.930267
+            Z: 353.151398
           }
           Rotation {
             Yaw: -45
@@ -2261,7 +2384,7 @@
             Z: 0.203495905
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2292,12 +2415,12 @@
         }
       }
       Objects {
-        Id: 5286181186750240159
-        Name: "Tray"
+        Id: 8214728633666308226
+        Name: "TrayStack"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 26.8575745
+            Z: 155.078735
           }
           Rotation {
           }
@@ -2307,14 +2430,11 @@
             Z: 1
           }
         }
-        ParentId: 5027707769586527830
-        ChildIds: 6647562384241030256
-        ChildIds: 16958581367355047203
-        ChildIds: 13799359393930321739
-        ChildIds: 18155344343128007447
-        ChildIds: 2242168740933591459
-        ChildIds: 17096881474353743443
-        ChildIds: 11541824058253670548
+        ParentId: 10419427016865325325
+        ChildIds: 6382718138587561999
+        ChildIds: 12157864152961121617
+        ChildIds: 5294595789311147452
+        ChildIds: 15018818874230567556
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2326,7 +2446,39 @@
         }
       }
       Objects {
-        Id: 6647562384241030256
+        Id: 6382718138587561999
+        Name: "Tray"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8214728633666308226
+        ChildIds: 3361842021387092066
+        ChildIds: 6421432772389367096
+        ChildIds: 1712149078676889704
+        ChildIds: 16203381463196729168
+        ChildIds: 11843767345990197242
+        ChildIds: 2528291637333753758
+        ChildIds: 16504845266513976714
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3361842021387092066
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
@@ -2339,7 +2491,7 @@
             Z: 0.0436299406
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2395,7 +2547,7 @@
         }
       }
       Objects {
-        Id: 16958581367355047203
+        Id: 6421432772389367096
         Name: "Fern 03"
         Transform {
           Location {
@@ -2411,7 +2563,7 @@
             Z: 0.230214551
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2434,7 +2586,7 @@
         }
       }
       Objects {
-        Id: 13799359393930321739
+        Id: 1712149078676889704
         Name: "Fern 03"
         Transform {
           Location {
@@ -2452,7 +2604,7 @@
             Z: 0.18247208
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2475,7 +2627,7 @@
         }
       }
       Objects {
-        Id: 18155344343128007447
+        Id: 16203381463196729168
         Name: "Fern 03"
         Transform {
           Location {
@@ -2493,7 +2645,7 @@
             Z: 0.203744233
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2516,7 +2668,7 @@
         }
       }
       Objects {
-        Id: 2242168740933591459
+        Id: 11843767345990197242
         Name: "Fern 03"
         Transform {
           Location {
@@ -2534,7 +2686,7 @@
             Z: 0.176165625
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2557,7 +2709,7 @@
         }
       }
       Objects {
-        Id: 17096881474353743443
+        Id: 2528291637333753758
         Name: "Fern 03"
         Transform {
           Location {
@@ -2575,7 +2727,7 @@
             Z: 0.114350572
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2598,7 +2750,7 @@
         }
       }
       Objects {
-        Id: 11541824058253670548
+        Id: 16504845266513976714
         Name: "Fern 03"
         Transform {
           Location {
@@ -2616,7 +2768,7 @@
             Z: 0.20342131
           }
         }
-        ParentId: 5286181186750240159
+        ParentId: 6382718138587561999
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2639,12 +2791,1053 @@
         }
       }
       Objects {
-        Id: 8556577323144166239
+        Id: 12157864152961121617
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 50
+          }
+          Rotation {
+            Yaw: 44.9999924
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8214728633666308226
+        ChildIds: 11820395186009775549
+        ChildIds: 1452278689136310486
+        ChildIds: 12284571464621647841
+        ChildIds: 3536425576800220581
+        ChildIds: 5441584388076448932
+        ChildIds: 12966767519041149766
+        ChildIds: 9587778768912731687
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11820395186009775549
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 12157864152961121617
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1452278689136310486
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12284571464621647841
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3536425576800220581
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5441584388076448932
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12966767519041149766
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9587778768912731687
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 12157864152961121617
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5294595789311147452
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+            Yaw: 89.9999542
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8214728633666308226
+        ChildIds: 5817908364691402849
+        ChildIds: 15736546763155251472
+        ChildIds: 3160573605866566856
+        ChildIds: 17615819032225048998
+        ChildIds: 10317057108428325545
+        ChildIds: 10622155897783839745
+        ChildIds: 11628687587063698258
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5817908364691402849
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 5294595789311147452
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15736546763155251472
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3160573605866566856
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17615819032225048998
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10317057108428325545
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10622155897783839745
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11628687587063698258
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 5294595789311147452
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15018818874230567556
+        Name: "Tray"
+        Transform {
+          Location {
+            Z: 150
+          }
+          Rotation {
+            Yaw: 134.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8214728633666308226
+        ChildIds: 156547896396836699
+        ChildIds: 4980845336830686484
+        ChildIds: 1852681774948389890
+        ChildIds: 14822646763753592949
+        ChildIds: 7736216977220433196
+        ChildIds: 8197177637779225670
+        ChildIds: 10202911083493039330
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 156547896396836699
+        Name: "Sci-fi Base Capsule 01 Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.23456943
+            Y: 0.23456943
+            Z: 0.0436299406
+          }
+        }
+        ParentId: 15018818874230567556
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14592110889302607791
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 10228836758127435713
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.283401
+              G: 0.322000027
+              B: 0.00838527
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2102772057339980212
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4980845336830686484
+        Name: "Fern 03"
+        Transform {
+          Location {
+            Y: -27.8302
+            Z: 12.046051
+          }
+          Rotation {
+            Roll: -9.2707634
+          }
+          Scale {
+            X: 0.148601621
+            Y: 0.148601621
+            Z: 0.230214551
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1852681774948389890
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 20.4371948
+            Y: -19.2142334
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: -42.2215576
+            Roll: -9.27166748
+          }
+          Scale {
+            X: 0.148602024
+            Y: 0.148601174
+            Z: 0.18247208
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14822646763753592949
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 27.256073
+            Y: 8.25500488
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 109.163536
+            Roll: -9.2727356
+          }
+          Scale {
+            X: 0.148602441
+            Y: 0.148601487
+            Z: 0.203744233
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7736216977220433196
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: 2.26260376
+            Y: 24.1252441
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 0.39817974
+            Roll: -9.27346802
+          }
+          Scale {
+            X: 0.148603559
+            Y: 0.148600861
+            Z: 0.176165625
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8197177637779225670
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -21.9637451
+            Y: 25.7056885
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522285
+            Roll: -9.27377319
+          }
+          Scale {
+            X: 0.0964598134
+            Y: 0.0964580923
+            Z: 0.114350572
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11766034142258701443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10202911083493039330
+        Name: "Fern 03"
+        Transform {
+          Location {
+            X: -25.2301636
+            Y: 1.58483887
+            Z: 12.046051
+          }
+          Rotation {
+            Yaw: 28.9522247
+            Roll: -9.27380371
+          }
+          Scale {
+            X: 0.171595
+            Y: 0.171591938
+            Z: 0.20342131
+          }
+        }
+        ParentId: 15018818874230567556
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11333580122150317225
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 554876351181447573
         Name: "Sci-fi Base Capsule 01 Base"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 37.4626694
+            Z: 165.683838
           }
           Rotation {
           }
@@ -2654,7 +3847,7 @@
             Z: 1.89211583
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2665,9 +3858,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.73
-              G: 0.865894
-              B: 1
+              R: 1
+              B: 0.005
               A: 1
             }
           }
@@ -2702,1057 +3894,13 @@
         }
       }
       Objects {
-        Id: 17129226449779229680
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 76.8575745
-          }
-          Rotation {
-            Yaw: 44.9999924
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5027707769586527830
-        ChildIds: 10557836075486288623
-        ChildIds: 2742367889178191065
-        ChildIds: 17086646801735682379
-        ChildIds: 16292375959222097816
-        ChildIds: 9455182538093663438
-        ChildIds: 4589994463156629479
-        ChildIds: 15886333744871117136
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 10557836075486288623
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 17129226449779229680
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2742367889178191065
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17086646801735682379
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16292375959222097816
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9455182538093663438
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4589994463156629479
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15886333744871117136
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 17129226449779229680
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15521655200411428833
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 126.857574
-          }
-          Rotation {
-            Yaw: 89.9999542
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5027707769586527830
-        ChildIds: 2242983062782177376
-        ChildIds: 4692447964491656996
-        ChildIds: 12240473534392103394
-        ChildIds: 4434591764590733777
-        ChildIds: 13736151010896214461
-        ChildIds: 11208767979017466217
-        ChildIds: 10466412400390271660
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 2242983062782177376
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 15521655200411428833
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4692447964491656996
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12240473534392103394
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4434591764590733777
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13736151010896214461
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11208767979017466217
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10466412400390271660
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 15521655200411428833
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10058198024079606921
-        Name: "Tray"
-        Transform {
-          Location {
-            Y: -97.7235107
-            Z: 176.857574
-          }
-          Rotation {
-            Yaw: 134.999954
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5027707769586527830
-        ChildIds: 3854462974833320749
-        ChildIds: 10008061567957756732
-        ChildIds: 1374151320542883200
-        ChildIds: 17590979248840285111
-        ChildIds: 3648203698134970704
-        ChildIds: 8653751878200939961
-        ChildIds: 3721502253023048472
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3854462974833320749
-        Name: "Sci-fi Base Capsule 01 Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.23456943
-            Y: 0.23456943
-            Z: 0.0436299406
-          }
-        }
-        ParentId: 10058198024079606921
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14592110889302607791
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 10228836758127435713
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.283401
-              G: 0.322000027
-              B: 0.00838527
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2102772057339980212
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10008061567957756732
-        Name: "Fern 03"
-        Transform {
-          Location {
-            Y: -27.8302
-            Z: 12.046051
-          }
-          Rotation {
-            Roll: -9.2707634
-          }
-          Scale {
-            X: 0.148601621
-            Y: 0.148601621
-            Z: 0.230214551
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1374151320542883200
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 20.4371948
-            Y: -19.2142334
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: -42.2215576
-            Roll: -9.27166748
-          }
-          Scale {
-            X: 0.148602024
-            Y: 0.148601174
-            Z: 0.18247208
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17590979248840285111
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 27.256073
-            Y: 8.25500488
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 109.163536
-            Roll: -9.2727356
-          }
-          Scale {
-            X: 0.148602441
-            Y: 0.148601487
-            Z: 0.203744233
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3648203698134970704
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: 2.26260376
-            Y: 24.1252441
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 0.39817974
-            Roll: -9.27346802
-          }
-          Scale {
-            X: 0.148603559
-            Y: 0.148600861
-            Z: 0.176165625
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8653751878200939961
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -21.9637451
-            Y: 25.7056885
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522285
-            Roll: -9.27377319
-          }
-          Scale {
-            X: 0.0964598134
-            Y: 0.0964580923
-            Z: 0.114350572
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11766034142258701443
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3721502253023048472
-        Name: "Fern 03"
-        Transform {
-          Location {
-            X: -25.2301636
-            Y: 1.58483887
-            Z: 12.046051
-          }
-          Rotation {
-            Yaw: 28.9522247
-            Roll: -9.27380371
-          }
-          Scale {
-            X: 0.171595
-            Y: 0.171591938
-            Z: 0.20342131
-          }
-        }
-        ParentId: 10058198024079606921
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11333580122150317225
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13131694552507157131
+        Id: 14406131302592399982
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            X: 154.264221
+            X: 154.264191
             Y: -4.95751953
-            Z: -15.4702911
+            Z: 112.750877
           }
           Rotation {
             Pitch: -3.05175781e-05
@@ -3765,7 +3913,7 @@
             Z: 1.20239437
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -3817,13 +3965,13 @@
         }
       }
       Objects {
-        Id: 3685785633169606791
+        Id: 385145592608493642
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            X: 154.264221
+            X: 154.264191
             Y: -24.9874268
-            Z: -35.6508713
+            Z: 92.5703049
           }
           Rotation {
             Pitch: -3.05175781e-05
@@ -3836,7 +3984,7 @@
             Z: 1
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail2:id"
@@ -3903,15 +4051,15 @@
         }
       }
       Objects {
-        Id: 5712710667653248609
+        Id: 7763870578944531052
         Name: "Sci-fi Base Breakout Box 02"
         Transform {
           Location {
-            Z: 260.163574
+            Z: 388.384735
           }
           Rotation {
             Pitch: -9.15527344e-05
-            Yaw: 179.999573
+            Yaw: 179.999542
             Roll: -90.0008545
           }
           Scale {
@@ -3920,7 +4068,7 @@
             Z: 0.473867774
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -3957,17 +4105,17 @@
         }
       }
       Objects {
-        Id: 4586137556789091628
+        Id: 4917290174431478469
         Name: "Spotlight"
         Transform {
           Location {
             Y: -97.7235107
-            Z: 377.832855
+            Z: 506.054
           }
           Rotation {
             Pitch: -90
-            Yaw: 25.2393837
-            Roll: -25.2394104
+            Yaw: 0.105512634
+            Roll: -0.105529785
           }
           Scale {
             X: 1
@@ -3975,7 +4123,7 @@
             Z: 1
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4015,13 +4163,13 @@
         }
       }
       Objects {
-        Id: 5998192266791165080
+        Id: 17740443275075407170
         Name: "Fuse Sparks VFX"
         Transform {
           Location {
-            X: 167.342102
+            X: 167.342072
             Y: -24.8154297
-            Z: 78.9832764
+            Z: 207.204468
           }
           Rotation {
           }
@@ -4031,7 +4179,7 @@
             Z: 1
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
@@ -4061,13 +4209,13 @@
         }
       }
       Objects {
-        Id: 12525095718830538129
+        Id: 11693910331792288291
         Name: "Fuse Sparks VFX"
         Transform {
           Location {
-            X: 124.250854
+            X: 124.250885
             Y: -51.3831787
-            Z: 11.7788239
+            Z: 140
           }
           Rotation {
           }
@@ -4077,7 +4225,7 @@
             Z: 1
           }
         }
-        ParentId: 5027707769586527830
+        ParentId: 10419427016865325325
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
@@ -4104,6 +4252,81 @@
           Vfx {
             AutoPlay: true
           }
+        }
+      }
+      Objects {
+        Id: 16000466786058347904
+        Name: "Electricity Spark Arc Loop 01 SFX"
+        Transform {
+          Location {
+            X: 156.028229
+            Y: -45
+            Z: 189.999985
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10419427016865325325
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 1547430305846296046
+          }
+          AutoPlay: true
+          Repeat: true
+          Volume: 1
+          Falloff: 3000
+          Radius: 200
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 17505726009483999028
+        Name: "Electrical Zap Explosion SFX"
+        Transform {
+          Location {
+            X: 156.028229
+            Y: -45
+            Z: 189.999985
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10419427016865325325
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 8731484459245172934
+          }
+          AutoPlay: true
+          Transient: true
+          Volume: 1
+          Falloff: 4000
+          Radius: 400
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
     }
@@ -4252,6 +4475,24 @@
       }
     }
     Assets {
+      Id: 11862530566950943688
+      Name: "Sci-fi Scanning Ray Beam Aura Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_scifi_scanning_ray_beam_aura_loop_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 2509442758212234458
+      Name: "Sci-fi Robot Machinery Transform 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_scifi_robot_machinery_transform_01_Cue_ref"
+      }
+    }
+    Assets {
       Id: 15856016453214529244
       Name: "Glitchy Hologram"
       PlatformAssetType: 2
@@ -4267,6 +4508,24 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_fuse_sparks"
+      }
+    }
+    Assets {
+      Id: 1547430305846296046
+      Name: "Electricity Spark Arc Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_electricity_spark_arc_loop_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 8731484459245172934
+      Name: "Electrical Zap Explosion SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_zapsplosion"
       }
     }
     PrimaryAssetId {

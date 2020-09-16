@@ -14,7 +14,6 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 --[[
     If this script is attached to equipment under Server Context, it will automatically save the
     equipment asset id to player storage on equipped event.
@@ -25,10 +24,9 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
       Thus, only 1 equipment can be saved per socket.
     - EquipmentPersisterStarterServer is required in the scene to reequip the saved equipment at the start of the game.
 ]]
-
 -- Internal custom properties
-local EQUIPMENT = script:FindAncestorByType('Equipment')
-if not EQUIPMENT:IsA('Equipment') then
+local EQUIPMENT = script:FindAncestorByType("Equipment")
+if not EQUIPMENT:IsA("Equipment") then
     error(script.name .. " should be part of Equipment object hierarchy.")
 end
 
@@ -36,8 +34,8 @@ end
 function OnEquipped(equipment, player)
     local playerData = Storage.GetPlayerData(player)
 
-	if type(playerData.equipment) ~= "table" then
-		playerData.equipment = {}
+    if type(playerData.equipment) ~= "table" then
+        playerData.equipment = {}
     end
 
     -- Saves equipment id to player socket key
@@ -49,4 +47,4 @@ function OnEquipped(equipment, player)
 end
 
 -- Initialize
-EQUIPMENT.equippedEvent:Connect(OnEquipped)
+--EQUIPMENT.equippedEvent:Connect(OnEquipped)

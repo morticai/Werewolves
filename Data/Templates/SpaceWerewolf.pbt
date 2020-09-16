@@ -15492,66 +15492,40 @@
       }
     }
     Assets {
-      Id: 12324597429549854992
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
+      Id: 7645640604404074354
+      Name: "Custom Fabric Space Insulation 02"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 1365414449916394621
+        ParameterOverrides {
+          Overrides {
+            Name: "color_secondary"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
       }
     }
     Assets {
-      Id: 11236189850874066005
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
+      Id: 1365414449916394621
+      Name: "Fabric Space Insulation 02"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_insulation_panels_002_uv"
       }
     }
     Assets {
-      Id: 7363477334452929865
-      Name: "Sphere"
+      Id: 16560483322831734200
+      Name: "Horn"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 18230898187504295667
-      Name: "Lens"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_lense_001"
-      }
-    }
-    Assets {
-      Id: 8210514785031040523
-      Name: "Thorn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_tooth_002"
-      }
-    }
-    Assets {
-      Id: 16238728816194148927
-      Name: "Cylinder - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_002"
-      }
-    }
-    Assets {
-      Id: 8817730766547370213
-      Name: "Grass Tall"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_grass_generic_001"
+        AssetId: "sm_horn_001"
       }
     }
     Assets {
@@ -15564,12 +15538,293 @@
       }
     }
     Assets {
-      Id: 16560483322831734200
-      Name: "Horn"
+      Id: 13409565214403724172
+      Name: "Werewolf Fur"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 1037052719649744698
+        ParameterOverrides {
+          Overrides {
+            Name: "wind_weight"
+            Float: 0.0117125595
+          }
+          Overrides {
+            Name: "dist_rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.232000008
+              G: 0.123417854
+              B: 0.0856079906
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_roots"
+            Color {
+              R: 0.096
+              G: 0.0751088783
+              B: 0.0662400052
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "SSS"
+            Color {
+              R: 0.63
+              G: 0.125165567
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "wind_speed"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "dist_radius"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_intensity"
+            Float: 2
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 1037052719649744698
+      Name: "Grass (default)"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_dynamic_001_uv"
+      }
+    }
+    Assets {
+      Id: 8817730766547370213
+      Name: "Grass Tall"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
+        AssetId: "sm_grass_generic_001"
+      }
+    }
+    Assets {
+      Id: 13330662989199046504
+      Name: "Custom Emissive Glow Transparent"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 3702191406046426907
+        ParameterOverrides {
+          Overrides {
+            Name: "emissive_boost"
+            Float: 95.9261551
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 3702191406046426907
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 16238728816194148927
+      Name: "Cylinder - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_002"
+      }
+    }
+    Assets {
+      Id: 10556886957675734021
+      Name: "Hair"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 10184847056121543272
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0.634635031
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0.282894462
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.07
+              G: 0.0197143331
+              B: 0.00440999726
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 10184847056121543272
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 8210514785031040523
+      Name: "Thorn"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_tooth_002"
+      }
+    }
+    Assets {
+      Id: 3905761152472637901
+      Name: "Flat Black"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 10184847056121543272
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 1
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 18230898187504295667
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
+      }
+    }
+    Assets {
+      Id: 7363477334452929865
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 11236189850874066005
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 13698917788564053945
+      Name: "Skin"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 10184847056121543272
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.471000016
+              G: 0.242808342
+              B: 0.137060955
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "roughness"
+            Float: 0.716435134
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0.8800354
+          }
+          Overrides {
+            Name: "fresnel_emissive_boost"
+            Float: 1.5
+          }
+          Overrides {
+            Name: "fresnel_sharpness"
+            Float: 0.36743021
+          }
+          Overrides {
+            Name: "fresnel_power"
+            Float: 0.2
+          }
+          Overrides {
+            Name: "fresnel_color"
+            Color {
+              R: 1
+              G: 0.389271557
+              B: 0.13
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 12324597429549854992
+      Name: "Teardrop - Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_truncated_teardrop_001"
+      }
+    }
+    Assets {
+      Id: 7613778591114394209
+      Name: "EquipmentPlayerCostumeClient"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "--[[\r\nCopyright 2020 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[\r\n    Automatically detects siblings with names that match socket names on the\r\n\tequipment owner and attaches those groups to the player sockets.\r\n\tE.g. A group named \"head\" will attach to the player\'s head.\r\n]]\r\n\r\nlocal EQUIPMENT = script:FindAncestorByType(\'Equipment\')\r\nif not EQUIPMENT then\r\n    error(script.name .. \" should be part of Equipment object hierarchy.\")\r\nend\r\nlocal COSTUME_FOLDER = script:GetCustomProperty(\"Costume\"):WaitForObject()\r\n\r\nlocal equipped = false\r\nlocal attachedCostume = {}\r\n\r\n-- nil OnEquipped(Equipment, Player)\r\nfunction OnEquipped(equipment, player)\r\n    if not Object.IsValid(COSTUME_FOLDER) then return end\r\n    if not Object.IsValid(player) or not player:IsA(\"Player\") then return end\r\n\r\n    for _, obj in ipairs(COSTUME_FOLDER:GetChildren()) do\r\n        obj:AttachToPlayer(player, obj.name)\r\n        table.insert(attachedCostume, obj)\r\n    end\r\n    equipped = true\r\nend\r\n\r\n-- nil OnUnequipped(Equipment, Player)\r\nfunction OnUnequipped(equipment, player)\r\n    for _, obj in ipairs(attachedCostume) do\r\n        obj:Detach()\r\n        obj:Destroy()\r\n    end\r\n    equipped = false\r\nend\r\n\r\n-- Initialize\r\nEQUIPMENT.equippedEvent:Connect(OnEquipped)\r\nEQUIPMENT.unequippedEvent:Connect(OnUnequipped)\r\n\r\nif not equipped and Object.IsValid(EQUIPMENT.owner) then\r\n    OnEquipped(EQUIPMENT, EQUIPMENT.owner)\r\nend"
+        CustomParameters {
+          Overrides {
+            Name: "cs:Costume"
+            ObjectReference {
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 10251728999306098252
+      Name: "EquipmentPersisterServer"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "--[[\r\nCopyright 2020 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[\r\n    If this script is attached to equipment under Server Context, it will automatically save the\r\n    equipment asset id to player storage on equipped event.\r\n    This script makes it possible for an equipment to be saved for the player.\r\n\r\n    Notes:\r\n    - This script overrides any other equipment id that has been saved on the same player socket.\r\n      Thus, only 1 equipment can be saved per socket.\r\n    - EquipmentPersisterStarterServer is required in the scene to reequip the saved equipment at the start of the game.\r\n]]\r\n\r\n-- Internal custom properties\r\nlocal EQUIPMENT = script:FindAncestorByType(\'Equipment\')\r\nif not EQUIPMENT:IsA(\'Equipment\') then\r\n    error(script.name .. \" should be part of Equipment object hierarchy.\")\r\nend\r\n\r\n-- nil OnEquipped(Equipment, Player)\r\nfunction OnEquipped(equipment, player)\r\n    local playerData = Storage.GetPlayerData(player)\r\n\r\n\tif type(playerData.equipment) ~= \"table\" then\r\n\t\tplayerData.equipment = {}\r\n    end\r\n\r\n    -- Saves equipment id to player socket key\r\n    if equipment.sourceTemplateId then\r\n        playerData.equipment[equipment.socket] = equipment.sourceTemplateId\r\n    end\r\n\r\n    Storage.SetPlayerData(player, playerData)\r\nend\r\n\r\n-- Initialize\r\nEQUIPMENT.equippedEvent:Connect(OnEquipped)"
+      }
+    }
+    Assets {
+      Id: 11028355391235865665
+      Name: "EquipmentPlayerCostumeServer"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "local EQUIPMENT = script:FindAncestorByType(\'Equipment\')\r\nif not EQUIPMENT then\r\n    error(script.name .. \" should be part of Equipment object hierarchy.\")\r\nend\r\nlocal IS_PLAYER_VISIBLE = EQUIPMENT:GetCustomProperty(\"IsPlayerVisible\")\r\n\r\nlocal equipped = false\r\n\r\n-- nil OnEquipped(Equipment, Player)\r\nfunction OnEquipped(equipment, player)\r\n    player:SetVisibility(IS_PLAYER_VISIBLE)\r\n\r\n    equipped = true\r\nend\r\n\r\n-- nil OnUnequipped(Equipment, Player)\r\nfunction OnUnequipped(equipment, player)\r\n    player:SetVisibility(true)\r\n    equipped = false\r\nend\r\n\r\n-- Initialize\r\nEQUIPMENT.equippedEvent:Connect(OnEquipped)\r\nEQUIPMENT.unequippedEvent:Connect(OnUnequipped)\r\n\r\nif not equipped and Object.IsValid(EQUIPMENT.owner) then\r\n    OnEquipped(EQUIPMENT, EQUIPMENT.owner)\r\nend"
       }
     }
     PrimaryAssetId {
@@ -15583,3 +15838,4 @@
   SerializationVersion: 62
   DirectlyPublished: true
 }
+IncludesAllDependencies: true

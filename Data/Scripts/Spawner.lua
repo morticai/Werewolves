@@ -1,7 +1,12 @@
 ﻿-------------------------------------------------------------------------------
--- Team Balancer & State Changer
--- DM Morticai#0001 if you have any questions
+-- Game Object Spawner
+-- @Morticai#0001 if you have any questions
 -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Requires
+-------------------------------------------------------------------------------
+local RES = require(script:GetCustomProperty("GameResources"))
+local UTIL = require(script:GetCustomProperty("GameUTIL"))
 -------------------------------------------------------------------------------
 -- Object Reference
 -------------------------------------------------------------------------------
@@ -12,10 +17,6 @@ local OxygenTanks = script:GetCustomProperty("OxygenTanks"):WaitForObject()
 -------------------------------------------------------------------------------
 local TempBroken = script:GetCustomProperty("BrokenStatic")
 local TempRepaired = script:GetCustomProperty("RepairedStatic")
--------------------------------------------------------------------------------
--- Constants
--------------------------------------------------------------------------------
-local OXYGEN_TANK_SPAWN_AMT = 3
 -------------------------------------------------------------------------------
 -- Variables
 -------------------------------------------------------------------------------
@@ -44,17 +45,29 @@ function RoundStartSpawnTanks()
     local tempTbl = RandomizeTable(shuffledSpawnMarker)
     local index = 1
     for _, SpawnMarker in pairs(tempTbl) do
-        if index <= OXYGEN_TANK_SPAWN_AMT then
+        if index <= RES.OXYGEN_TANK_SPAWN_AMT then
             objectBroken[index] =
                 World.SpawnAsset(TempBroken, {parent = SpawnMarker, rotation = SpawnMarker:GetWorldRotation()})
+            index = index + 1
+        else
+            objectRepaired[index] =
+                World.SpawnAsset(TempRepaired, {parent = SpawnMarker, rotation = SpawnMarker:GetWorldRotation()})
             index = index + 1
         end
     end
 end
 
 function SpawnRepairedTank(obj)
-    objectRepaired[#objectRepaired + 1] =
+    objectBroken[#objectRepaired + 1] =
         World.SpawnAsset(TempRepaired, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
+    if Object.IsValid(obj) then
+        obj:Destroy()
+    end
+end
+
+function SpawnBrokenTank(obj)
+    objectRepaired[#objectRepaired + 1] =
+        World.SpawnAsset(TempBroken, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
     if Object.IsValid(obj) then
         obj:Destroy()
     end

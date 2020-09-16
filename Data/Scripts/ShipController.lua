@@ -26,5 +26,4 @@ function OnNetworkChanged(object, string)
 end
 
 GAMESTATE.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
-
 GAMESTATE:SetNetworkedCustomProperty("ShipHealth", 15)
