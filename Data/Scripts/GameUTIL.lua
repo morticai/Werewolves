@@ -48,10 +48,11 @@ end
 function API.SpawnPlayerAbility(Player, id)
     local Ability = World.SpawnAsset(id)
     Ability.owner = Player
+    return Ability
 end
 
 --@param object Player
---@param int id 
+--@param int id
 function API.DestroyPlayerAbility(Player, id)
     for _, ability in ipairs(Player:GetAbilities()) do
         if ability == id then
@@ -63,10 +64,10 @@ function API.DestroyPlayerAbility(Player, id)
     end
 end
 
+
 --@param Player object
 function API.DestroyAllPlayerAbilities(Player)
     for _, ability in ipairs(Player:GetAbilities()) do
-        ability:Unequip()
         if Object.IsValid(ability) then
             ability:Destroy()
         end

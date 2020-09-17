@@ -27,6 +27,12 @@
           Id: 13634837308390422890
         }
       }
+      Overrides {
+        Name: "cs:GameUTIL"
+        AssetReference {
+          Id: 5179202431137992008
+        }
+      }
     }
   }
   SerializationVersion: 63

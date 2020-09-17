@@ -7,6 +7,7 @@
 -------------------------------------------------------------------------------
 local RES = require(script:GetCustomProperty("GameResources"))
 local UTIL = require(script:GetCustomProperty("GameUTIL"))
+local POI = require(script:GetCustomProperty("APIPointOfInterest"))
 -------------------------------------------------------------------------------
 -- Object Reference
 -------------------------------------------------------------------------------
@@ -100,7 +101,6 @@ function OnNetworkChanged(Object, string)
         end
     end
 end
-
 -------------------------------------------------------------------------------
 -- Initialize
 -------------------------------------------------------------------------------

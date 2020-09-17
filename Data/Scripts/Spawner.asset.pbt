@@ -16,6 +16,12 @@
           Id: 13634837308390422890
         }
       }
+      Overrides {
+        Name: "cs:APIPointOfInterest"
+        AssetReference {
+          Id: 633982945275732435
+        }
+      }
     }
   }
   SerializationVersion: 63

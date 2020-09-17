@@ -10,6 +10,7 @@
 -- Requires
 -------------------------------------------------------------------------------
 local RES = require(script:GetCustomProperty("GameResources"))
+local UTIL = require(script:GetCustomProperty("GameUTIL"))
 -------------------------------------------------------------------------------
 -- Objects & Custom properties
 -------------------------------------------------------------------------------
@@ -40,6 +41,7 @@ function OnInteracted(trigger, other)
     if other:IsA("Player") and other.team == RES.HUMAN_TEAM and not isRepaired then
         ChangeTankHealth(RES.HUMAN_REPAIR_AMMOUNT, isRepaired)
     elseif other:IsA("Player") and other.team == RES.WEREWOLF_TEAM and isRepaired then
+        Events.BroadcastToPlayer(other, "ActivateAbility")
         ChangeTankHealth(RES.WEREWOLF_TANK_DAMAGE_AMMOUNT, isRepaired)
     end
 end
