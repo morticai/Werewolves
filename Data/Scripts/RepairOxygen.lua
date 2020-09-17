@@ -2,6 +2,10 @@
 -- Player Repair & Destroy Oxygen Tank Game Objective
 -- @Morticai#0001 if you have any questions
 -------------------------------------------------------------------------------
+
+-- TODO Check human has repair tool
+-- TODO Match up repair with ship health of tanks
+
 -------------------------------------------------------------------------------
 -- Requires
 -------------------------------------------------------------------------------
@@ -36,7 +40,7 @@ function OnInteracted(trigger, other)
     if other:IsA("Player") and other.team == RES.HUMAN_TEAM and not isRepaired then
         ChangeTankHealth(RES.HUMAN_REPAIR_AMMOUNT, isRepaired)
     elseif other:IsA("Player") and other.team == RES.WEREWOLF_TEAM and isRepaired then
-        ChangeTankHealth(RES.WEREWOLF_DAMAGE_AMMOUNT, isRepaired)
+        ChangeTankHealth(RES.WEREWOLF_TANK_DAMAGE_AMMOUNT, isRepaired)
     end
 end
 

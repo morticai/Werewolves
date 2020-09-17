@@ -2,7 +2,7 @@
   Id: 13409565214403724172
   Name: "Werewolf Fur"
   PlatformAssetType: 13
-  SerializationVersion: 62
+  SerializationVersion: 63
   CustomMaterialAsset {
     BaseMaterialId: 1037052719649744698
     ParameterOverrides {

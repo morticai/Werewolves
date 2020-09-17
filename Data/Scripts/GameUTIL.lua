@@ -13,7 +13,7 @@ local RES = require(script:GetCustomProperty("GameResources"))
 -------------------------------------------------------------------------------
 
 --@param object Player
---@param in id
+--@param int id
 function API.SpawnPlayerEquipment(Player, id)
     local Equipment = World.SpawnAsset(id)
     Equipment:Equip(Player)
@@ -44,7 +44,7 @@ function API.RemovePlayerEquipment(Player, socket)
 end
 
 --@param object Player
---@param in id
+--@param int id
 function API.SpawnPlayerAbility(Player, id)
     local Ability = World.SpawnAsset(id)
     Ability.owner = Player

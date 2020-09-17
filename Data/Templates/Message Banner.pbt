@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 14657766165477448216
-  Name: "Game State Display"
+  Id: 3116333822382212693
+  Name: "Message Banner"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11397727575064778677
+      RootId: 11168525500713847895
       Objects {
-        Id: 11397727575064778677
-        Name: "Game State Display"
+        Id: 11168525500713847895
+        Name: "Message Banner"
         Transform {
           Scale {
             X: 1
@@ -15,40 +15,16 @@
             Z: 1
           }
         }
-        ParentId: 15560188646105002552
-        ChildIds: 1605561193072132470
+        ParentId: 6344321037654884984
+        ChildIds: 11273653940987149079
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ShowStateName"
-            Bool: true
+            Name: "cs:DefaultDuration"
+            Float: 3
           }
           Overrides {
-            Name: "cs:ShowDuringLobby"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:ShowDuringRound"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:ShowDuringRoundEnd"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ShowStateName:tooltip"
-            String: "Whether to show which state the game is in"
-          }
-          Overrides {
-            Name: "cs:ShowDuringLobby:tooltip"
-            String: "Whether to show during the lobby state"
-          }
-          Overrides {
-            Name: "cs:ShowDuringRound:tooltip"
-            String: "Whether to show during the round state"
-          }
-          Overrides {
-            Name: "cs:ShowDuringRoundEnd:tooltip"
-            String: "Whether to show during the round end state"
+            Name: "cs:DefaultDuration:tooltip"
+            String: "Default duration of a message if none is specified"
           }
         }
         Collidable_v2 {
@@ -62,8 +38,8 @@
         }
       }
       Objects {
-        Id: 1605561193072132470
-        Name: "ClientContext"
+        Id: 11273653940987149079
+        Name: "MessageBannerClient"
         Transform {
           Location {
           }
@@ -75,9 +51,9 @@
             Z: 1
           }
         }
-        ParentId: 11397727575064778677
-        ChildIds: 11701566102101910365
-        ChildIds: 6621926890735536071
+        ParentId: 11168525500713847895
+        ChildIds: 4755700116685582654
+        ChildIds: 13042368893488459696
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -90,8 +66,8 @@
         }
       }
       Objects {
-        Id: 11701566102101910365
-        Name: "GameStateDisplayClient"
+        Id: 4755700116685582654
+        Name: "MessageBannerClient"
         Transform {
           Location {
           }
@@ -103,30 +79,24 @@
             Z: 1
           }
         }
-        ParentId: 1605561193072132470
+        ParentId: 11273653940987149079
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 11974742996071064388
-            }
-          }
           Overrides {
             Name: "cs:ComponentRoot"
             ObjectReference {
-              SubObjectId: 11397727575064778677
+              SubObjectId: 11168525500713847895
             }
           }
           Overrides {
-            Name: "cs:StateNameText"
+            Name: "cs:Panel"
             ObjectReference {
-              SubObjectId: 6092631959476493595
+              SubObjectId: 13469228761640500648
             }
           }
           Overrides {
-            Name: "cs:StateTimeText"
+            Name: "cs:TextBox"
             ObjectReference {
-              SubObjectId: 3299506318204361248
+              SubObjectId: 2215929790428371099
             }
           }
         }
@@ -138,13 +108,13 @@
         }
         Script {
           ScriptAsset {
-            Id: 3307912974547883426
+            Id: 6695237015703086192
           }
         }
       }
       Objects {
-        Id: 6621926890735536071
-        Name: "Canvas"
+        Id: 13042368893488459696
+        Name: "BannerCanvas"
         Transform {
           Location {
           }
@@ -156,8 +126,8 @@
             Z: 1
           }
         }
-        ParentId: 1605561193072132470
-        ChildIds: 13474914646443004031
+        ParentId: 11273653940987149079
+        ChildIds: 13469228761640500648
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -174,11 +144,23 @@
           }
           Canvas {
           }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
         }
       }
       Objects {
-        Id: 13474914646443004031
-        Name: "UI Panel"
+        Id: 13469228761640500648
+        Name: "Panel"
         Transform {
           Location {
           }
@@ -190,9 +172,8 @@
             Z: 1
           }
         }
-        ParentId: 6621926890735536071
-        ChildIds: 6092631959476493595
-        ChildIds: 3299506318204361248
+        ParentId: 13042368893488459696
+        ChildIds: 2215929790428371099
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -202,10 +183,9 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 200
-          Height: 60
-          UIX: -380
-          UIY: -30
+          Width: 600
+          Height: 100
+          UIY: -250
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -216,20 +196,20 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
         }
       }
       Objects {
-        Id: 6092631959476493595
-        Name: "StateName"
+        Id: 2215929790428371099
+        Name: "BannerText"
         Transform {
           Location {
           }
@@ -241,7 +221,7 @@
             Z: 1
           }
         }
-        ParentId: 13474914646443004031
+        ParentId: 13469228761640500648
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -251,21 +231,22 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 100
-          Height: 60
+          Width: 600
+          Height: 100
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
           Text {
+            Label: "Message Banner"
             Color {
               R: 1
               G: 1
               B: 1
               A: 1
             }
-            Size: 30
+            Size: 50
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -274,71 +255,12 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3299506318204361248
-        Name: "StateTime"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13474914646443004031
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 60
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "00:00"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            Size: 30
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -347,7 +269,7 @@
     }
     PrimaryAssetId {
       AssetType: "TemplateAssetRef"
-      AssetId: "Game_State_Display"
+      AssetId: "Message_Banner"
     }
   }
   SerializationVersion: 63

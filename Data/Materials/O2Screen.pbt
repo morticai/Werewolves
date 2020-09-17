@@ -2,7 +2,7 @@
   Id: 5861378696068657309
   Name: "O2Screen"
   PlatformAssetType: 13
-  SerializationVersion: 62
+  SerializationVersion: 63
   CustomMaterialAsset {
     BaseMaterialId: 6197928254766195519
     ParameterOverrides {

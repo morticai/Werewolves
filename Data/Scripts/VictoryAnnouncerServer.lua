@@ -20,6 +20,8 @@ component)
 --]]
 -- nil OnPlayerVictory(Player)
 -- Announces the winning player
+local RES = require(script:GetCustomProperty("GameResources"))
+
 
 function OnPlayerVictory(player)
 	Events.BroadcastToAllPlayers("BannerMessage", string.format("%s wins!", player.name))
@@ -29,10 +31,10 @@ end
 -- Announces the winning team
 function OnTeamVictory(team)
 	print(team)
-	if team == 1 then
-		Events.BroadcastToAllPlayers("BannerMessage", string.format("Humans Win!", team))
-	elseif team == 2 then
-		Events.BroadcastToAllPlayers("BannerMessage", string.format("Werewolves Wins!", team))
+	if team == RES.HUMAN_TEAM then
+		Events.BroadcastToAllPlayers("BannerMessage", string.format(RES.HUMAN_WIN_MESSAGE, team))
+	elseif team == RES.WEREWOLF_TEAM then
+		Events.BroadcastToAllPlayers("BannerMessage", string.format(RES.WEREWOLF_WIN_MESSAGE, team))
 	end
 end
 

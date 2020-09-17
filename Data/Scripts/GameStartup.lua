@@ -11,14 +11,15 @@ local UTIL = require(script:GetCustomProperty("GameUTIL"))
 -------------------------------------------------------------------------------
 -- Objects
 -------------------------------------------------------------------------------
---TODO - change these to folders with same team spawnpoints.
 local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
+local GAMESTATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
 -------------------------------------------------------------------------------
 -- Variables
 -------------------------------------------------------------------------------
 local Werewolves = {}
 local currentWerewolves, currentHumans = 0, 0
 local Spawns, currentSpawnPoint = {}, 0
+local isWerewolfMorphed = false
 -------------------------------------------------------------------------------
 -- local functions
 -------------------------------------------------------------------------------
@@ -27,10 +28,34 @@ local Spawns, currentSpawnPoint = {}, 0
 local function ShouldSpawnWerewolf(value)
 	return value >= 0 and (value * RES.HUMAN_SPAWN_MULTIPLIER) < currentHumans
 end
--- @param value(int) - currentWerewolves or tbl count
+-- @param value(int) optional - currentWerewolves or tbl count
 -- @return true if a Werewolve is needed
 local function isEnoughWerewolves(value)
 	return (currentHumans / RES.HUMAN_SPAWN_MULTIPLIER) < value
+end
+
+-- @param value(int) optional - add or remove from currentSpawnPoint count
+-- @return currentSpawnPoint count
+local function CurrentSpawnPointCount(int)
+	if int then
+		currentSpawnPoint = currentSpawnPoint + int
+	end
+	return currentSpawnPoint
+end
+-- @param value(int) optional - add or remove from currentWerewolves count
+-- @return currentWerewolves count
+local function CurrentWerewolfCount(int)
+	if int then
+		currentWerewolves = currentWerewolves + int
+	end
+	return currentWerewolves
+end
+
+local function CurrentHumanCount(int)
+	if int then
+		currentHumans = currentHumans + int
+	end
+	return currentHumans
 end
 
 --@param tbl t
@@ -76,7 +101,7 @@ function FindWerewolf()
 	for _, Player in pairs(shuffled) do
 		if ShouldSpawnWerewolf(currentWerewolves) then
 			ChangePlayerToWerewolf(Player)
-			currentHumans = currentHumans - 1
+			CurrentHumanCount(-1)
 		end
 	end
 end
@@ -91,20 +116,16 @@ end
 
 function ChangePlayerToWerewolf(Player)
 	Player.team = RES.WEREWOLF_TEAM
-	currentWerewolves = currentWerewolves + 1
-	currentSpawnPoint = currentSpawnPoint + 1
+	CurrentWerewolfCount(1)
 	Player:Respawn()
-	Player:SetWorldPosition(Spawns[currentSpawnPoint]:GetWorldPosition())
-	UTIL.SpawnPlayerEquipment(Player, "EED76D4050FF4B5B:SpaceWerewolf") -- TODO loop through players / sort by team at specific state and swap players to werewolf form.
-	Player.maxWalkSpeed = RES.WEREWOLF_SPEED
+	Player:SetWorldPosition(Spawns[CurrentSpawnPointCount(1)]:GetWorldPosition())
 end
 
 function ChangePlayerToHuman(Player)
 	Player.team = RES.HUMAN_TEAM
-	currentHumans = currentHumans + 1
-	currentSpawnPoint = currentSpawnPoint + 1
+	CurrentHumanCount(1)
 	Player:Respawn()
-	Player:SetWorldPosition(Spawns[currentSpawnPoint]:GetWorldPosition())
+	Player:SetWorldPosition(Spawns[CurrentSpawnPointCount(1)]:GetWorldPosition())
 	Player.maxWalkSpeed = RES.HUMAN_SPEED
 end
 
@@ -115,8 +136,19 @@ function ResetAllPlayers()
 		UTIL.RemoveAllPlayerEquipment(Player)
 		ChangePlayerToHuman(Player)
 	end
+	isWerewolfMorphed = false
 	Task.Wait()
 	FindWerewolf()
+end
+
+function MorphPlayersToWerewolf()
+	for _, Player in ipairs(Game.GetPlayers()) do
+		if Player.team == RES.WEREWOLF_TEAM then
+			UTIL.SpawnPlayerEquipment(Player, RES.WEREWOLF_COSTUME_MUID)
+			Player.maxWalkSpeed = RES.WEREWOLF_SPEED
+		end
+	end
+	isWerewolfMorphed = true
 end
 
 --TODO Working but could be improved
@@ -129,23 +161,36 @@ function OnPlayerLeft(DisconnectedPlayer)
 				shouldResetRound = false
 			end
 		end
-		currentHumans = currentHumans - 1
+		CurrentHumanCount(-1)
 	end
 	if shouldResetRound and currentState == ABGS.GAME_STATE_ROUND then
 		ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
 	elseif
 		DisconnectedPlayer.team == RES.WEREWOLF_TEAM and currentState == ABGS.GAME_STATE_ROUND and currentWerewolves == 1
 	 then
-		currentWerewolves = currentWerewolves - 1
+		CurrentWerewolfCount(-1)
 		FindWerewolf()
 	end
 	Werewolves[DisconnectedPlayer] = nil
+end
+
+-- TODO working but should find a better soulotion then running on a tick
+function Tick()
+	if
+		not isWerewolfMorphed and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and
+			ABGS.GetTimeRemainingInState() < RES.WEREWOLF_MORPH_TIME
+	 then
+		MorphPlayersToWerewolf()
+	end
+	Task.Wait(1)
 end
 
 -------------------------------------------------------------------------------
 -- Initialize
 -------------------------------------------------------------------------------
 Events.Connect("GameStateChanged", OnGameStateChanged)
+
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+
 Spawns = RandomizeTable(SpawnPoints:GetChildren())

@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 13634837308390422890
-  Name: "GameResources"
+  Id: 18247701612153171944
+  Name: "ShipHealth"
   PlatformAssetType: 3
   TextAsset {
   }

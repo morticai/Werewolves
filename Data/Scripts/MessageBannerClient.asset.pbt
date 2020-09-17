@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 13634837308390422890
-  Name: "GameResources"
+  Id: 6695237015703086192
+  Name: "MessageBannerClient"
   PlatformAssetType: 3
   TextAsset {
   }

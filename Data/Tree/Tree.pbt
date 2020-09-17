@@ -20,6 +20,8 @@ Objects {
   ChildIds: 5214476104957917529
   ChildIds: 16240810510747695301
   ChildIds: 1589494968194899612
+  ChildIds: 12927774790587490852
+  ChildIds: 1868977173700556523
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -29,6 +31,207 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 1868977173700556523
+  Name: "Message Banner"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11168525500713847895
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Message Banner"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3116333822382212693
+    }
+  }
+}
+Objects {
+  Id: 12927774790587490852
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  ChildIds: 3804361366388730867
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 3804361366388730867
+  Name: "UI Container"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12927774790587490852
+  ChildIds: 12172370930761239847
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12172370930761239847
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3804361366388730867
+  ChildIds: 13594840624141725032
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIY: -43.9251709
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Text"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 50
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13594840624141725032
+  Name: "ShipHealth"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12172370930761239847
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BasicGameStateManagerServer"
+      ObjectReference {
+        SelfId: 6163886537222272278
+      }
+    }
+    Overrides {
+      Name: "cs:UITextBox"
+      ObjectReference {
+        SelfId: 12172370930761239847
+      }
+    }
+    Overrides {
+      Name: "cs:GameResources"
+      AssetReference {
+        Id: 13634837308390422890
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 18247701612153171944
+    }
   }
 }
 Objects {
@@ -196,6 +399,12 @@ Objects {
       Name: "cs:SpawnPoints"
       ObjectReference {
         SelfId: 6440809903796681665
+      }
+    }
+    Overrides {
+      Name: "cs:BasicGameStateManagerServer"
+      ObjectReference {
+        SelfId: 6163886537222272278
       }
     }
   }
@@ -1755,6 +1964,12 @@ Objects {
         SelfId: 11047599577150686094
       }
     }
+    Overrides {
+      Name: "cs:BasicGameStateManagerServer"
+      ObjectReference {
+        SelfId: 6163886537222272278
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1801,7 +2016,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LobbyDuration"
-      Float: 1
+      Float: 10
     }
     Overrides {
       Name: "cs:RoundHasDuration"
@@ -1809,7 +2024,7 @@ Objects {
     }
     Overrides {
       Name: "cs:RoundDuration"
-      Float: 30
+      Float: 90
     }
     Overrides {
       Name: "cs:RoundEndHasDuration"
