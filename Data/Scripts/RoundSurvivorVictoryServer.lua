@@ -14,7 +14,6 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 --[[
 This component ends the round when either a single team or single player remain (depending on the "ByTeam" property). It
 also broadcasts the following events (server only):
@@ -23,13 +22,18 @@ PlayerVictory(Player winner)
 TeamVictory(int winningTeam)
 TieVictory()
 --]]
-
 -- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
+local GAMESTATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
+local RES = require(script:GetCustomProperty("GameResources"))
 
 -- User exposed properties
 local BY_TEAM = COMPONENT_ROOT:GetCustomProperty("ByTeam")
+
+function GetShipHealth()
+	return GAMESTATE:GetCustomProperty(RES.STARTING_SHIP_OXYGEN_NAME)
+end
 
 -- nil Tick(float)
 -- Watches the end condition of only one team or one player alive
@@ -43,17 +47,24 @@ function Tick(deltaTime)
 		if #Game.GetPlayers() == 1 then
 			return
 		end
-		
+
 		if BY_TEAM then
 			local winningTeam = nil
+			if GetShipHealth() <= 0 then
+				Game.SetTeamScore(RES.WEREWOLF_TEAM, 100)
+				winningTeam = RES.WEREWOLF_TEAM
+			elseif GetShipHealth() >= 100 then
+				Game.SetTeamScore(RES.HUMAN_TEAM, 100)
+				winningTeam = RES.HUMAN_TEAM
+			else
+				for _, player in pairs(Game.GetPlayers()) do
+					if not player.isDead then
+						if winningTeam ~= nil and winningTeam ~= player.team then
+							return -- We've got two teams alive
+						end
 
-			for _, player in pairs(Game.GetPlayers()) do
-				if not player.isDead then
-					if winningTeam ~= nil and winningTeam ~= player.team then
-						return		-- We've got two teams alive
+						winningTeam = player.team
 					end
-
-					winningTeam = player.team
 				end
 			end
 
@@ -71,7 +82,7 @@ function Tick(deltaTime)
 			for _, player in pairs(Game.GetPlayers()) do
 				if not player.isDead then
 					if winner then
-						return		-- Two players are alive
+						return -- Two players are alive
 					else
 						winner = player
 					end

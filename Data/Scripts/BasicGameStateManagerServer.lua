@@ -14,11 +14,10 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 -- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
-
+local RES = require(script:GetCustomProperty("GameResources"))
 -- User exposed properties
 local LOBBY_HAS_DURATION = COMPONENT_ROOT:GetCustomProperty("LobbyHasDuration")
 local LOBBY_DURATION = COMPONENT_ROOT:GetCustomProperty("LobbyDuration")
@@ -29,18 +28,22 @@ local ROUND_END_DURATION = COMPONENT_ROOT:GetCustomProperty("RoundEndDuration")
 
 -- Check user properties
 if LOBBY_DURATION < 0.0 then
-    warn("LobbyDuration must be non-negative")
-    LOBBY_DURATION = 0.0
+	warn("LobbyDuration must be non-negative")
+	LOBBY_DURATION = 0.0
 end
 
 if ROUND_DURATION < 0.0 then
-    warn("RoundDuration must be non-negative")
-    ROUND_DURATION = 0.0
+	warn("RoundDuration must be non-negative")
+	ROUND_DURATION = 0.0
 end
 
 if ROUND_END_DURATION < 0.0 then
-    warn("RoundEndDuration must be non-negative")
-    ROUND_END_DURATION = 0.0
+	warn("RoundEndDuration must be non-negative")
+	ROUND_END_DURATION = 0.0
+end
+
+function SetShipHealth(AMT)
+	script:SetNetworkedCustomProperty(RES.STARTING_SHIP_OXYGEN_NAME, AMT)
 end
 
 -- int GetGameState()
@@ -60,7 +63,6 @@ function GetTimeRemainingInState()
 	return math.max(endTime - time(), 0.0)
 end
 
-
 -- nil SetGameState()
 -- Sets the state and configures timing. Passed to API
 function SetGameState(newState)
@@ -74,7 +76,7 @@ function SetGameState(newState)
 	elseif newState == ABGS.GAME_STATE_ROUND then
 		stateHasduration = ROUND_HAS_DURATION
 		stateDuration = ROUND_DURATION
-		script:SetNetworkedCustomProperty("ShipHealth", 50)
+		SetShipHealth(RES.STARTING_SHIP_OXYGEN)
 	elseif newState == ABGS.GAME_STATE_ROUND_END then
 		stateHasduration = ROUND_END_HAS_DURATION
 		stateDuration = ROUND_END_DURATION
@@ -133,7 +135,6 @@ function Tick(deltaTime)
 		elseif previousState == ABGS.GAME_STATE_ROUND_END then
 			nextState = ABGS.GAME_STATE_LOBBY
 		end
-
 		SetGameState(nextState)
 	end
 end

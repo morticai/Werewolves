@@ -20,7 +20,7 @@ local AS = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local NAMEPLATE_TEMPLATE = script:GetCustomProperty("NameplateTemplate")
 local SEGMENT_SEPARATOR_TEMPLATE = script:GetCustomProperty("SegmentSeparatorTemplate")
-
+local RES = require(script:GetCustomProperty("GameResources"))
 -- User exposed properties
 local SHOW_NAMES = COMPONENT_ROOT:GetCustomProperty("ShowNames")
 local SHOW_HEALTHBARS = COMPONENT_ROOT:GetCustomProperty("ShowHealthbars")
@@ -130,7 +130,7 @@ function OnPlayerJoined(player)
 	nameplates[player].backgroundPiece:SetColor(BACKGROUND_COLOR)
 	nameplates[player].healthText:SetPosition(Vector3.New(50.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))		-- Text must be 50 units ahead as it doesn't have thickness
 	nameplates[player].healthText:SetColor(HEALTH_NUMBER_COLOR)
-	nameplates[player].nameText.text = player.name .. " " .. player.team
+	nameplates[player].nameText.text = player.name
 
 	nameplates[player].borderPiece.visibility = Visibility.FORCE_OFF
 	nameplates[player].backgroundPiece.visibility = Visibility.FORCE_OFF
@@ -315,6 +315,9 @@ function Tick(deltaTime)
 					local healthColor = nil
 
 					if player == LOCAL_PLAYER or Teams.AreTeamsFriendly(player.team, LOCAL_PLAYER.team) then
+						nameColor = FRIENDLY_NAME_COLOR
+						healthColor = FRIENDLY_HEALTH_COLOR
+					elseif player.team == RES.WEREWOLF_TEAM and player:GetResource(RES.WEREWOLF_CHANGE_RES_NAME) == RES.WEREWOLF_HUMAN_APPERANCE then
 						nameColor = FRIENDLY_NAME_COLOR
 						healthColor = FRIENDLY_HEALTH_COLOR
 					else

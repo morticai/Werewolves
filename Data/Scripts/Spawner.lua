@@ -7,6 +7,7 @@
 -------------------------------------------------------------------------------
 local RES = require(script:GetCustomProperty("GameResources"))
 local UTIL = require(script:GetCustomProperty("GameUTIL"))
+local POI = require(script:GetCustomProperty("APIPointOfInterest"))
 -------------------------------------------------------------------------------
 -- Object Reference
 -------------------------------------------------------------------------------
@@ -45,26 +46,28 @@ function RoundStartSpawnTanks()
     local tempTbl = RandomizeTable(shuffledSpawnMarker)
     local index = 1
     for _, SpawnMarker in pairs(tempTbl) do
-        if index <= RES.OXYGEN_TANK_SPAWN_AMT then
-            objectBroken[index] =
-                World.SpawnAsset(TempBroken, {parent = SpawnMarker, rotation = SpawnMarker:GetWorldRotation()})
-            index = index + 1
+        local markerRot = SpawnMarker:GetWorldRotation()
+        if index <= RES.BROKEN_OXYGEN_TANK_SPAWN_AMT then
+            objectBroken[index] = World.SpawnAsset(TempBroken, {parent = SpawnMarker, rotation = markerRot})
         else
-            objectRepaired[index] =
-                World.SpawnAsset(TempRepaired, {parent = SpawnMarker, rotation = SpawnMarker:GetWorldRotation()})
-            index = index + 1
+            objectRepaired[index] = World.SpawnAsset(TempRepaired, {parent = SpawnMarker, rotation = markerRot})
         end
+        index = index + 1
     end
 end
 
+--@param Object obj
+--Destroys old Object and spawns in broken tank
 function SpawnRepairedTank(obj)
-    objectBroken[#objectRepaired + 1] =
+    objectBroken[#objectBroken + 1] =
         World.SpawnAsset(TempRepaired, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
     if Object.IsValid(obj) then
         obj:Destroy()
     end
 end
 
+--@param Object obj
+--Destroys old Object and spawns in repaired tank
 function SpawnBrokenTank(obj)
     objectRepaired[#objectRepaired + 1] =
         World.SpawnAsset(TempBroken, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
@@ -97,7 +100,6 @@ function OnNetworkChanged(Object, string)
         end
     end
 end
-
 -------------------------------------------------------------------------------
 -- Initialize
 -------------------------------------------------------------------------------

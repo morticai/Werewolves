@@ -16,8 +16,11 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 13146627692838692424
-        ChildIds: 898962836782991356
+        ChildIds: 10033280363376666749
+        ChildIds: 13503741747389446934
+        ChildIds: 16605137335848710096
+        ChildIds: 1687365871160379658
+        ChildIds: 12819863088453681736
         ChildIds: 5795409596708770970
         ChildIds: 17820268682226821000
         ChildIds: 3939443997684533716
@@ -46,23 +49,52 @@
         }
       }
       Objects {
-        Id: 13146627692838692424
-        Name: "Ability"
+        Id: 10033280363376666749
+        Name: "Hitbox Trigger"
         Transform {
           Location {
-            X: -421.102264
-            Y: 2031.59277
-            Z: -1.90734863e-05
+            X: 27.5967407
+            Z: 170
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
         }
         ParentId: 4369523751008722125
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:PlayerSocket"
+            String: "root"
+          }
+          Overrides {
+            Name: "cs:LocalPosition"
+            Vector {
+              X: 100
+              Z: 120
+            }
+          }
+          Overrides {
+            Name: "cs:LocalRotation"
+            Rotator {
+            }
+          }
+          Overrides {
+            Name: "cs:LocalPosition:tooltip"
+            String: "Specify the local position of the object when attached to the player socket."
+          }
+          Overrides {
+            Name: "cs:LocalRotation:tooltip"
+            String: "Specify the local rotation of the object when attached to the player socket."
+          }
+          Overrides {
+            Name: "cs:PlayerSocket:tooltip"
+            String: "Specify the player socket to attach the object."
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -70,65 +102,24 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Ability {
-          IsEnabled: true
-          CastPhaseSettings {
-            Duration: 0.15
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          ExecutePhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          Animation: "1hand_melee_rm_combo_opener_vertical_slash"
-          KeyBinding_v2 {
-            Value: "mc:egameaction:secondaryaction"
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
           }
         }
       }
       Objects {
-        Id: 898962836782991356
-        Name: "Ability"
+        Id: 13503741747389446934
+        Name: "Attack 1"
         Transform {
           Location {
-            X: -421.102264
-            Y: 2031.59277
-            Z: -1.90734863e-05
+            X: -630
+            Y: -254.999878
+            Z: 2000
           }
           Rotation {
           }
@@ -139,6 +130,44 @@
           }
         }
         ParentId: 4369523751008722125
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Damage"
+            Float: 25
+          }
+          Overrides {
+            Name: "cs:Hitbox"
+            ObjectReference {
+              SubObjectId: 10033280363376666749
+            }
+          }
+          Overrides {
+            Name: "cs:SwingEffect"
+            AssetReference {
+              Id: 17611672696088004268
+            }
+          }
+          Overrides {
+            Name: "cs:SwingSpawnDelay"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:SwingRotationX"
+            Float: -4.8
+          }
+          Overrides {
+            Name: "cs:SwingRotationY"
+            Float: -4
+          }
+          Overrides {
+            Name: "cs:Damage:tooltip"
+            String: "Damage value applied to a player hit by hitbox trigger."
+          }
+          Overrides {
+            Name: "cs:Hitbox:tooltip"
+            String: "Reference to the hitbox trigger that this ability will use for damaging enemies."
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -149,7 +178,7 @@
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.15
+            Duration: 0.12
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -160,6 +189,7 @@
             }
           }
           ExecutePhaseSettings {
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -181,7 +211,123 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 0.38
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "1hand_melee_slash_left"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:primaryaction"
+          }
+        }
+      }
+      Objects {
+        Id: 16605137335848710096
+        Name: "Attack 2"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4369523751008722125
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Damage"
+            Float: 28
+          }
+          Overrides {
+            Name: "cs:Hitbox"
+            ObjectReference {
+              SubObjectId: 10033280363376666749
+            }
+          }
+          Overrides {
+            Name: "cs:SwingEffect"
+            AssetReference {
+              Id: 17611672696088004268
+            }
+          }
+          Overrides {
+            Name: "cs:SwingSpawnDelay"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:SwingRotationX"
+            Float: 180
+          }
+          Overrides {
+            Name: "cs:SwingRotationY"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Damage:tooltip"
+            String: "Damage value applied to a player hit by hitbox trigger."
+          }
+          Overrides {
+            Name: "cs:Hitbox:tooltip"
+            String: "Reference to the hitbox trigger that this ability will use for damaging enemies."
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.12
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.38
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -192,8 +338,241 @@
             }
           }
           Animation: "1hand_melee_slash_right"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:secondaryaction"
+          }
+        }
+      }
+      Objects {
+        Id: 1687365871160379658
+        Name: "Attack 1 - Combo"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4369523751008722125
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Damage"
+            Float: 25
+          }
+          Overrides {
+            Name: "cs:Hitbox"
+            ObjectReference {
+              SubObjectId: 10033280363376666749
+            }
+          }
+          Overrides {
+            Name: "cs:SwingEffect"
+            AssetReference {
+              Id: 17611672696088004268
+            }
+          }
+          Overrides {
+            Name: "cs:SwingSpawnDelay"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:SwingRotationX"
+            Float: -4.8
+          }
+          Overrides {
+            Name: "cs:SwingRotationY"
+            Float: -4
+          }
+          Overrides {
+            Name: "cs:Damage:tooltip"
+            String: "Damage value applied to a player hit by hitbox trigger."
+          }
+          Overrides {
+            Name: "cs:Hitbox:tooltip"
+            String: "Reference to the hitbox trigger that this ability will use for damaging enemies."
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.12
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.38
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "1hand_melee_rm_combo_closer_uppercut"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
+          }
+        }
+      }
+      Objects {
+        Id: 12819863088453681736
+        Name: "Attack 2 - Combo"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4369523751008722125
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Damage"
+            Float: 28
+          }
+          Overrides {
+            Name: "cs:Hitbox"
+            ObjectReference {
+              SubObjectId: 10033280363376666749
+            }
+          }
+          Overrides {
+            Name: "cs:SwingEffect"
+            AssetReference {
+              Id: 17611672696088004268
+            }
+          }
+          Overrides {
+            Name: "cs:SwingSpawnDelay"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:SwingRotationX"
+            Float: 180
+          }
+          Overrides {
+            Name: "cs:SwingRotationY"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Damage:tooltip"
+            String: "Damage value applied to a player hit by hitbox trigger."
+          }
+          Overrides {
+            Name: "cs:Hitbox:tooltip"
+            String: "Reference to the hitbox trigger that this ability will use for damaging enemies."
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.12
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.38
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "1hand_melee_rm_combo_middle_diagonal_slash"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:secondaryaction"
           }
         }
       }
@@ -214,6 +593,9 @@
         ParentId: 4369523751008722125
         ChildIds: 13458012695951387480
         ChildIds: 11166652723186301117
+        ChildIds: 10965824940117994756
+        ChildIds: 930897674529556529
+        ChildIds: 10007220327592231856
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -280,6 +662,110 @@
         }
       }
       Objects {
+        Id: 10965824940117994756
+        Name: "EquipmentAttachObjectToPlayer"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5795409596708770970
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 10033280363376666749
+            }
+          }
+          Overrides {
+            Name: "cs:Object:tooltip"
+            String: "Set object to attach to player on equip event."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12439034694186114331
+          }
+        }
+      }
+      Objects {
+        Id: 930897674529556529
+        Name: "EquipmentStanceServer"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5795409596708770970
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1427829216143793458
+          }
+        }
+      }
+      Objects {
+        Id: 10007220327592231856
+        Name: "EquipmentMeleeAttacksServer"
+        Transform {
+          Location {
+            X: -630
+            Y: -254.999878
+            Z: 2000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5795409596708770970
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5082628058110625875
+          }
+        }
+      }
+      Objects {
         Id: 17820268682226821000
         Name: "Client Context"
         Transform {
@@ -294,8 +780,11 @@
           }
         }
         ParentId: 4369523751008722125
+        ChildIds: 12189344373290314973
         ChildIds: 9675463869221836207
         ChildIds: 17956554586663149710
+        ChildIds: 14412417620679529308
+        ChildIds: 18365870234073808566
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -306,6 +795,38 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 12189344373290314973
+        Name: "EquipmentMeleeAttacksClient"
+        Transform {
+          Location {
+            X: 295
+            Y: -875
+            Z: 1865
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17820268682226821000
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12971704803185333098
+          }
         }
       }
       Objects {
@@ -15733,6 +16254,86 @@
         }
       }
       Objects {
+        Id: 14412417620679529308
+        Name: "Creature Wolf Howl Far Reverb 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17820268682226821000
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5634300855014398683
+          }
+          AutoPlay: true
+          Transient: true
+          Pitch: -100
+          Volume: 4
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+        }
+      }
+      Objects {
+        Id: 18365870234073808566
+        Name: "Cinematic Low Brass Bram Hit Music Stinger Kit 01"
+        Transform {
+          Location {
+            Y: -200
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17820268682226821000
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:emx_cinematiclowhornskit:29"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17571735748967156926
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Transient: true
+            Pitch: -400
+            Volume: 2
+            Falloff: 3600
+            Radius: 400
+          }
+        }
+      }
+      Objects {
         Id: 3939443997684533716
         Name: "PickupTrigger"
         Transform {
@@ -15856,6 +16457,24 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_tooth_001"
+      }
+    }
+    Assets {
+      Id: 5634300855014398683
+      Name: "Creature Wolf Howl Far Reverb 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_creature_wolf_howl_far_reverb_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 17571735748967156926
+      Name: "Cinematic Low Brass Bram Hit Music Stinger Kit 01"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "abp_cinematic_low_brass_hit_kit_01_ref"
       }
     }
     PrimaryAssetId {

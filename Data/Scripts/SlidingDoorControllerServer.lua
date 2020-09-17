@@ -14,45 +14,46 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 --[[
 Doors operate in the relative space of the root of the component. In that space, they move in the -Y direction. The Door
 root should have position (0.0, 0.0, 0.0).
 This broadcasts custom events DoorOpened(CoreObject) and DoorClosed(CoreObject)
 --]]
-
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local DOOR_ROOT = script:GetCustomProperty("DoorRoot"):WaitForObject()
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+local GAMESTATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
 
 -- User exposed properties
 local AUTO_OPEN = COMPONENT_ROOT:GetCustomProperty("AutoOpen")
-local TIME_OPEN = COMPONENT_ROOT:GetCustomProperty("TimeOpen")		-- Only used with AutoOpen
-local OPEN_LABEL = COMPONENT_ROOT:GetCustomProperty("OpenLabel")	-- Only used without AutoOpen
-local CLOSE_LABEL = COMPONENT_ROOT:GetCustomProperty("CloseLabel")	-- Only used without AutoOpen
+local TIME_OPEN = COMPONENT_ROOT:GetCustomProperty("TimeOpen") -- Only used with AutoOpen
+local OPEN_LABEL = COMPONENT_ROOT:GetCustomProperty("OpenLabel") -- Only used without AutoOpen
+local CLOSE_LABEL = COMPONENT_ROOT:GetCustomProperty("CloseLabel") -- Only used without AutoOpen
 local OPEN_DISTANCE = COMPONENT_ROOT:GetCustomProperty("OpenDistance")
 local SPEED = COMPONENT_ROOT:GetCustomProperty("Speed")
 local RESET_ON_ROUND_START = COMPONENT_ROOT:GetCustomProperty("ResetOnRoundStart")
 
+local isClosedOnLobby = script:GetCustomProperty("isClosedOnLobby")
+
 -- Check user properties
 if TIME_OPEN < 0.0 then
-    warn("TimeOpen cannot be negative")
-    TIME_OPEN = 0.0
+	warn("TimeOpen cannot be negative")
+	TIME_OPEN = 0.0
 end
 
 if SPEED <= 0.0 then
-    warn("Speed must be positive")
-    SPEED = 450.0
+	warn("Speed must be positive")
+	SPEED = 450.0
 end
 
 -- Constants
-local USE_DEBOUNCE_TIME = 0.2			-- Time after using that a player can't use again
+local USE_DEBOUNCE_TIME = 0.2 -- Time after using that a player can't use again
 
 -- Variables
 -- Offset is 1.0 for fully opened, 0.0 for closed
 local targetDoorOffset = 0.0
-local playerLastUseTimes = {}			-- Player -> float
+local playerLastUseTimes = {} -- Player -> float
 local autoCloseTime = 0.0
 
 -- float GetDoorOffset()
@@ -78,7 +79,11 @@ end
 -- Sets the offset that the door should move to (at SPEED)
 function SetTargetOffset(offset)
 	targetDoorOffset = offset
-	DOOR_ROOT:MoveTo(Vector3.New(0.0, -OPEN_DISTANCE * offset, 0.0), OPEN_DISTANCE * math.abs(targetDoorOffset - GetDoorOffset()) / SPEED, true)
+	DOOR_ROOT:MoveTo(
+		Vector3.New(0.0, -OPEN_DISTANCE * offset, 0.0),
+		OPEN_DISTANCE * math.abs(targetDoorOffset - GetDoorOffset()) / SPEED,
+		true
+	)
 end
 
 -- nil ResetDoor()
@@ -104,11 +109,14 @@ end
 -- Handles the player overlapping if AutoOpen is true
 function OnBeginOverlap(trigger, other)
 	if other:IsA("Player") then
-		if GetDoorOffset() == 0.0 then								-- Can't auto open if the door isn't closed
+		if GetDoorOffset() == 0.0 and not isClosedOnLobby then
 			OpenDoor(other)
-
-			autoCloseTime = time() + TIME_OPEN
+		elseif
+			isClosedOnLobby and GetDoorOffset() == 0.0 and GAMESTATE:GetCustomProperty("State") == 1
+		 then
+			OpenDoor(other)
 		end
+		autoCloseTime = time() + TIME_OPEN
 	end
 end
 
@@ -121,11 +129,11 @@ function OnInteracted(trigger, player)
 
 	playerLastUseTimes[player] = time()
 
-	if GetDoorOffset() == 0.0 then									-- Door is closed
+	if GetDoorOffset() == 0.0 then -- Door is closed
 		OpenDoor(player)
 
 		TRIGGER.interactionLabel = CLOSE_LABEL
-	else															-- Door is open or moving, clsoe it
+	else -- Door is open or moving, clsoe it
 		CloseDoor()
 	end
 end
@@ -140,9 +148,9 @@ end
 -- Handle closing the door with AutoOpen, and changing interaction label back to open
 function Tick(deltaTime)
 	if AUTO_OPEN and targetDoorOffset ~= 0.0 then
-		for _, player in pairs(Game.GetPlayers()) do				-- Don't close the door if someone is standing in it
+		for _, player in pairs(Game.GetPlayers()) do -- Don't close the door if someone is standing in it
 			if TRIGGER:IsOverlapping(player) then
-				autoCloseTime = time() + TIME_OPEN					-- and delay closing
+				autoCloseTime = time() + TIME_OPEN -- and delay closing
 				return
 			end
 		end
@@ -166,7 +174,7 @@ end
 -- Initialize
 if AUTO_OPEN then
 	TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
-	TRIGGER.isInteractable = false
+	--TRIGGER.isInteractable = false
 
 	for _, player in pairs(Game.GetPlayers()) do
 		if TRIGGER:IsOverlapping(player) then
@@ -174,8 +182,8 @@ if AUTO_OPEN then
 		end
 	end
 else
+	--TRIGGER.isInteractable = true
 	TRIGGER.interactedEvent:Connect(OnInteracted)
-	TRIGGER.isInteractable = true
 end
 
 if RESET_ON_ROUND_START then
