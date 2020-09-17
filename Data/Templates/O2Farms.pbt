@@ -54,11 +54,12 @@
         ChildIds: 16602516996848421747
         ChildIds: 6152213560107816061
         ChildIds: 14775910086342278057
+        ChildIds: 12323777815892705936
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Folder {
           IsGroup: true
@@ -1946,6 +1947,15 @@
               Id: 5861378696068657309
             }
           }
+          Overrides {
+            Name: "ma:Shared_Detail3:color"
+            Color {
+              R: 0.135633349
+              G: 0.337163717
+              B: 0.234550625
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2062,11 +2072,11 @@
           Light {
             Temperature: 6500
             LocalLight {
-              AttenuationRadius: 1000
+              AttenuationRadius: 400
               SpotLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20
-                FallOffExponent: 8
+                FallOffExponent: 2
                 UseFallOffExponent: true
                 InnerConeAngle: 7.22681189
                 OuterConeAngle: 18.3132515
@@ -2109,11 +2119,11 @@
           }
           AutoPlay: true
           Repeat: true
+          Pitch: 200
           Volume: 1
           Falloff: 3000
           Radius: 200
-          EnableOcclusion: true
-          FadeInTime: 3
+          FadeInTime: 2
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -2143,15 +2153,87 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 2509442758212234458
+            Id: 2522968967982522494
           }
           AutoPlay: true
           Transient: true
+          Pitch: 400
           Volume: 1
           Falloff: -1
           Radius: 400
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 12323777815892705936
+        Name: "Beam Down Teleport VFX"
+        Transform {
+          Location {
+            Y: -97.7235107
+            Z: 345.535095
+          }
+          Rotation {
+            Roll: 179.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2059150388724307694
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.175496638
+              G: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Color"
+            Color {
+              R: 0.175496638
+              G: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Color"
+            Color {
+              R: 0.135633349
+              G: 0.337163717
+              B: 0.234550625
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Ground Element Color"
+            Color {
+              R: 0.135633349
+              G: 0.337163717
+              B: 0.234550625
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8783986406255632051
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
         }
       }
       Objects {
@@ -2183,11 +2265,12 @@
         ChildIds: 11693910331792288291
         ChildIds: 16000466786058347904
         ChildIds: 17505726009483999028
+        ChildIds: 16562336646833392380
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         Folder {
           IsGroup: true
@@ -4144,11 +4227,11 @@
           Light {
             Temperature: 6500
             LocalLight {
-              AttenuationRadius: 1000
+              AttenuationRadius: 400
               SpotLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20
-                FallOffExponent: 8
+                FallOffExponent: 2
                 UseFallOffExponent: true
                 InnerConeAngle: 7.22681189
                 OuterConeAngle: 18.3132515
@@ -4259,8 +4342,8 @@
         Name: "Electricity Spark Arc Loop 01 SFX"
         Transform {
           Location {
-            X: 156.028229
-            Y: -45
+            X: 156.028198
+            Y: -52.3331909
             Z: 189.999985
           }
           Rotation {
@@ -4287,7 +4370,6 @@
           Volume: 1
           Falloff: 3000
           Radius: 200
-          EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -4327,6 +4409,47 @@
           Radius: 400
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 16562336646833392380
+        Name: "Basic Explosion VFX"
+        Transform {
+          Location {
+            X: 155.580505
+            Y: -50
+            Z: 136.946686
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.364360064
+            Y: 0.364360064
+            Z: 0.364360064
+          }
+        }
+        ParentId: 10419427016865325325
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Ring"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17069761961690292468
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
         }
       }
     }
@@ -4484,12 +4607,21 @@
       }
     }
     Assets {
-      Id: 2509442758212234458
-      Name: "Sci-fi Robot Machinery Transform 01 SFX"
+      Id: 2522968967982522494
+      Name: "Sci-fi Bubbly Powerup Buff Charge 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_scifi_robot_machinery_transform_01_Cue_ref"
+        AssetId: "sfx_scifi_bubbly_powerup_buff_charge_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 8783986406255632051
+      Name: "Beam Down Teleport VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_Teleporter_BeamDown"
       }
     }
     Assets {
@@ -4528,10 +4660,19 @@
         AssetId: "sfx_zapsplosion"
       }
     }
+    Assets {
+      Id: 17069761961690292468
+      Name: "Basic Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_explosion"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 62
+  SerializationVersion: 63
 }

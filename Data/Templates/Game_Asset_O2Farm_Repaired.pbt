@@ -62,7 +62,7 @@
         ChildIds: 16843624106731231685
         ChildIds: 12727439348483132696
         ChildIds: 16016632302889255101
-        ChildIds: 11926844141035301332
+        ChildIds: 13941153104429284464
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -591,18 +591,18 @@
         }
       }
       Objects {
-        Id: 11926844141035301332
+        Id: 13941153104429284464
         Name: "Spotlight"
         Transform {
           Location {
-            X: -38.56604
-            Y: -36.406189
-            Z: 473.021576
+            X: -38.565918
+            Y: -38.6826172
+            Z: 468.021606
           }
           Rotation {
             Pitch: -90
-            Yaw: 179.050537
-            Roll: -179.050568
+            Yaw: -0.0131835938
+            Roll: 0.013188228
           }
           Scale {
             X: 1
@@ -631,11 +631,11 @@
           Light {
             Temperature: 6500
             LocalLight {
-              AttenuationRadius: 1000
+              AttenuationRadius: 400
               SpotLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20
-                FallOffExponent: 8
+                FallOffExponent: 2
                 UseFallOffExponent: true
                 InnerConeAngle: 7.22681189
                 OuterConeAngle: 18.3132515
@@ -666,8 +666,9 @@
           }
         }
         ParentId: 5989542232907101050
-        ChildIds: 2354572251694013672
-        ChildIds: 18061583388459699350
+        ChildIds: 10095323778218309011
+        ChildIds: 8250062899893969790
+        ChildIds: 16866405238453865642
         ChildIds: 11302449269559996499
         WantsNetworking: true
         Collidable_v2 {
@@ -680,7 +681,77 @@
         }
       }
       Objects {
-        Id: 2354572251694013672
+        Id: 10095323778218309011
+        Name: "Beam Down Teleport VFX"
+        Transform {
+          Location {
+            Z: 94.5709229
+          }
+          Rotation {
+            Roll: 179.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10508441680301643316
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.175496638
+              G: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Color"
+            Color {
+              R: 0.175496638
+              G: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Color"
+            Color {
+              R: 0.135633349
+              G: 0.337163717
+              B: 0.234550625
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Ground Element Color"
+            Color {
+              R: 0.135633349
+              G: 0.337163717
+              B: 0.234550625
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8783986406255632051
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 8250062899893969790
         Name: "Sci-fi Scanning Ray Beam Aura Loop 01 SFX"
         Transform {
           Location {
@@ -706,17 +777,17 @@
           }
           AutoPlay: true
           Repeat: true
+          Pitch: 200
           Volume: 1
           Falloff: 3000
           Radius: 200
-          EnableOcclusion: true
-          FadeInTime: 3
+          FadeInTime: 2
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
       Objects {
-        Id: 18061583388459699350
+        Id: 16866405238453865642
         Name: "Sci-fi Robot Machinery Transform 01 SFX"
         Transform {
           Location {
@@ -738,10 +809,11 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 2509442758212234458
+            Id: 2522968967982522494
           }
           AutoPlay: true
           Transient: true
+          Pitch: 400
           Volume: 1
           Falloff: -1
           Radius: 400
@@ -2398,6 +2470,15 @@
       }
     }
     Assets {
+      Id: 8783986406255632051
+      Name: "Beam Down Teleport VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_Teleporter_BeamDown"
+      }
+    }
+    Assets {
       Id: 11862530566950943688
       Name: "Sci-fi Scanning Ray Beam Aura Loop 01 SFX"
       PlatformAssetType: 7
@@ -2407,12 +2488,12 @@
       }
     }
     Assets {
-      Id: 2509442758212234458
-      Name: "Sci-fi Robot Machinery Transform 01 SFX"
+      Id: 2522968967982522494
+      Name: "Sci-fi Bubbly Powerup Buff Charge 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_scifi_robot_machinery_transform_01_Cue_ref"
+        AssetId: "sfx_scifi_bubbly_powerup_buff_charge_01_Cue_ref"
       }
     }
     Assets {
@@ -2456,5 +2537,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 62
+  SerializationVersion: 63
 }

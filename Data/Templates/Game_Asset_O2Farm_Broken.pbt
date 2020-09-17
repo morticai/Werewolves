@@ -63,7 +63,7 @@
         ChildIds: 3663169793273039385
         ChildIds: 1479210134582323340
         ChildIds: 1568090815044687005
-        ChildIds: 11880349115312763163
+        ChildIds: 17717039124864878473
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1994,13 +1994,13 @@
         }
       }
       Objects {
-        Id: 11880349115312763163
+        Id: 17717039124864878473
         Name: "Spotlight"
         Transform {
           Location {
-            X: -34.2809334
+            X: -34.2807617
             Y: -32.3610535
-            Z: 473.021545
+            Z: 473.021484
           }
           Rotation {
             Pitch: -90
@@ -2034,11 +2034,11 @@
           Light {
             Temperature: 6500
             LocalLight {
-              AttenuationRadius: 1000
+              AttenuationRadius: 400
               SpotLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20
-                FallOffExponent: 8
+                FallOffExponent: 2
                 UseFallOffExponent: true
                 InnerConeAngle: 7.22681189
                 OuterConeAngle: 18.3132515
@@ -2072,8 +2072,9 @@
         ParentId: 2360940705553678146
         ChildIds: 21050041775846708
         ChildIds: 10947179986154207825
-        ChildIds: 528951734703358192
-        ChildIds: 493803307935400677
+        ChildIds: 8065731083715780812
+        ChildIds: 4833203961015644792
+        ChildIds: 6069468041164705712
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2176,13 +2177,13 @@
         }
       }
       Objects {
-        Id: 528951734703358192
+        Id: 8065731083715780812
         Name: "Electricity Spark Arc Loop 01 SFX"
         Transform {
           Location {
-            X: 5.11587524
+            X: 5.11572266
             Y: -3.4503479
-            Z: 49.9999695
+            Z: 50
           }
           Rotation {
           }
@@ -2208,19 +2209,18 @@
           Volume: 1
           Falloff: 3000
           Radius: 200
-          EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
       Objects {
-        Id: 493803307935400677
+        Id: 4833203961015644792
         Name: "Electrical Zap Explosion SFX"
         Transform {
           Location {
-            X: 5.11587524
+            X: 5.11572266
             Y: -3.4503479
-            Z: 49.9999695
+            Z: 50
           }
           Rotation {
           }
@@ -2248,6 +2248,46 @@
           Radius: 400
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 6069468041164705712
+        Name: "Basic Explosion VFX"
+        Transform {
+          Location {
+            X: -0.912109375
+            Y: -8.4503479
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.364360064
+            Y: 0.364360064
+            Z: 0.364360064
+          }
+        }
+        ParentId: 13945350323853704890
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Ring"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17069761961690292468
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
         }
       }
       Objects {
@@ -2522,10 +2562,19 @@
         AssetId: "sfx_zapsplosion"
       }
     }
+    Assets {
+      Id: 17069761961690292468
+      Name: "Basic Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_explosion"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 62
+  SerializationVersion: 63
 }

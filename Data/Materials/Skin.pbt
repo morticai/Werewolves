@@ -2,7 +2,7 @@
   Id: 13698917788564053945
   Name: "Skin"
   PlatformAssetType: 13
-  SerializationVersion: 62
+  SerializationVersion: 63
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {
