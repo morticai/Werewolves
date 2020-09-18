@@ -28,6 +28,7 @@
         ChildIds: 5345079094800002612
         ChildIds: 3357293474904384523
         ChildIds: 7963589689246783824
+        ChildIds: 7614989810176803778
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -693,6 +694,56 @@
           }
         }
       }
+      Objects {
+        Id: 7614989810176803778
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+            Z: 240
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2.5
+            Y: 2.5
+            Z: 5
+          }
+        }
+        ParentId: 4107868308381882705
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:2"
+            }
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.135633335
+              G: 0.337163627
+              B: 0.23455058
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 10682850786726686694
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
     }
     Assets {
       Id: 2102772057339980212
@@ -791,6 +842,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_flower_daisy_001"
+      }
+    }
+    Assets {
+      Id: 10682850786726686694
+      Name: "Callout Sparkle"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_sparkles_volume_vfx"
       }
     }
     PrimaryAssetId {

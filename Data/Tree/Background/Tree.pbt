@@ -1,7 +1,7 @@
 ﻿Name: "Background"
-RootId: 9666846854649729104
+RootId: 11452676118102605895
 Objects {
-  Id: 1352393644509252766
+  Id: 963113389276981505
   Name: "Frame"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666846854649729104
+  ParentId: 11452676118102605895
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -57,14 +57,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 1352393644509252766
-    SubobjectId: 11102501600001120001
-    InstanceId: 809974617494038715
-    TemplateId: 15760438563218588314
+    SelfId: 963113389276981505
+    SubobjectId: 13370892375458386763
+    InstanceId: 6299403702576044352
+    TemplateId: 17149826935911447321
   }
 }
 Objects {
-  Id: 12534469290142930905
+  Id: 6177482674871898346
   Name: "Frame"
   Transform {
     Location {
@@ -77,7 +77,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666846854649729104
+  ParentId: 11452676118102605895
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -121,14 +121,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 12534469290142930905
-    SubobjectId: 2676204514419051590
-    InstanceId: 809974617494038715
-    TemplateId: 15760438563218588314
+    SelfId: 6177482674871898346
+    SubobjectId: 16242665826580523680
+    InstanceId: 6299403702576044352
+    TemplateId: 17149826935911447321
   }
 }
 Objects {
-  Id: 6209350565290145536
+  Id: 15974602008708684148
   Name: "Frame"
   Transform {
     Location {
@@ -141,7 +141,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666846854649729104
+  ParentId: 11452676118102605895
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -184,14 +184,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 6209350565290145536
-    SubobjectId: 16067897666092199071
-    InstanceId: 809974617494038715
-    TemplateId: 15760438563218588314
+    SelfId: 15974602008708684148
+    SubobjectId: 7593762366739276606
+    InstanceId: 6299403702576044352
+    TemplateId: 17149826935911447321
   }
 }
 Objects {
-  Id: 15371374889908908152
+  Id: 16807355049958924213
   Name: "Background"
   Transform {
     Location {
@@ -204,7 +204,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666846854649729104
+  ParentId: 11452676118102605895
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -247,9 +247,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 15371374889908908152
-    SubobjectId: 6738142324693183463
-    InstanceId: 809974617494038715
-    TemplateId: 15760438563218588314
+    SelfId: 16807355049958924213
+    SubobjectId: 6768031859830990335
+    InstanceId: 6299403702576044352
+    TemplateId: 17149826935911447321
   }
 }

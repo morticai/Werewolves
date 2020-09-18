@@ -9,10 +9,6 @@
         Id: 158121022397366721
         Name: "Helper_CompassPOI"
         Transform {
-          Location {
-          }
-          Rotation {
-          }
           Scale {
             X: 1
             Y: 1
@@ -52,6 +48,7 @@
         Control {
           Width: 45
           Height: 45
+          UIY: -55
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -67,7 +64,7 @@
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:topcenter"
               }
             }
           }
@@ -99,6 +96,8 @@
         Control {
           Width: 20
           Height: 20
+          UIY: 55.9616661
+          RotationAngle: 180
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -155,6 +154,7 @@
         Control {
           Width: 25
           Height: 10
+          UIY: -5.82347775
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -213,6 +213,7 @@
         Control {
           Width: 25
           Height: 10
+          UIY: -14.3360748
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"

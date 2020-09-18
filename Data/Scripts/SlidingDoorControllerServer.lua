@@ -22,7 +22,6 @@ This broadcasts custom events DoorOpened(CoreObject) and DoorClosed(CoreObject)
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local DOOR_ROOT = script:GetCustomProperty("DoorRoot"):WaitForObject()
-local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local GAMESTATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
 
 -- User exposed properties
@@ -34,7 +33,11 @@ local OPEN_DISTANCE = COMPONENT_ROOT:GetCustomProperty("OpenDistance")
 local SPEED = COMPONENT_ROOT:GetCustomProperty("Speed")
 local RESET_ON_ROUND_START = COMPONENT_ROOT:GetCustomProperty("ResetOnRoundStart")
 
-local isClosedOnLobby = script:GetCustomProperty("isClosedOnLobby")
+local isClosedOnLobby = script:GetCustomProperty("isClosedOnLobby") or false
+local TRIGGER
+if not isClosedOnLobby then
+TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+end
 
 -- Check user properties
 if TIME_OPEN < 0.0 then
@@ -111,9 +114,7 @@ function OnBeginOverlap(trigger, other)
 	if other:IsA("Player") then
 		if GetDoorOffset() == 0.0 and not isClosedOnLobby then
 			OpenDoor(other)
-		elseif
-			isClosedOnLobby and GetDoorOffset() == 0.0 and GAMESTATE:GetCustomProperty("State") == 1
-		 then
+		elseif isClosedOnLobby and GetDoorOffset() == 0.0 and GAMESTATE:GetCustomProperty("State") == 1 then
 			OpenDoor(other)
 		end
 		autoCloseTime = time() + TIME_OPEN
@@ -147,6 +148,17 @@ end
 -- nil Tick(float)
 -- Handle closing the door with AutoOpen, and changing interaction label back to open
 function Tick(deltaTime)
+	if GAMESTATE:GetCustomProperty("State") == 1 and isClosedOnLobby then
+		DOOR_ROOT.collision = Collision.FORCE_OFF
+		DOOR_ROOT.visibility = Visibility.FORCE_OFF
+	elseif GAMESTATE:GetCustomProperty("State") == 2 and isClosedOnLobby then
+		DOOR_ROOT.collision = Collision.FORCE_ON
+		DOOR_ROOT.visibility = Visibility.FORCE_ON
+	elseif GAMESTATE:GetCustomProperty("State") == 0 and isClosedOnLobby then
+		DOOR_ROOT.collision = Collision.FORCE_ON
+		DOOR_ROOT.visibility = Visibility.FORCE_ON
+	end
+
 	if AUTO_OPEN and targetDoorOffset ~= 0.0 then
 		for _, player in pairs(Game.GetPlayers()) do -- Don't close the door if someone is standing in it
 			if TRIGGER:IsOverlapping(player) then
@@ -172,7 +184,7 @@ function Tick(deltaTime)
 end
 
 -- Initialize
-if AUTO_OPEN then
+if AUTO_OPEN and TRIGGER ~= nil then
 	TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
 	--TRIGGER.isInteractable = false
 
@@ -181,8 +193,7 @@ if AUTO_OPEN then
 			OnBeginOverlap(TRIGGER, player)
 		end
 	end
-else
-	--TRIGGER.isInteractable = true
+elseif TRIGGER ~= nil then
 	TRIGGER.interactedEvent:Connect(OnInteracted)
 end
 

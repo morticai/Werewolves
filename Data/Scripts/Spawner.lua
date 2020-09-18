@@ -46,11 +46,13 @@ function RoundStartSpawnTanks()
     local tempTbl = RandomizeTable(shuffledSpawnMarker)
     local index = 1
     for _, SpawnMarker in pairs(tempTbl) do
-        local markerRot = SpawnMarker:GetWorldRotation()
+        local markerRot = SpawnMarker:GetRotation()
         if index <= RES.BROKEN_OXYGEN_TANK_SPAWN_AMT then
             objectBroken[index] = World.SpawnAsset(TempBroken, {parent = SpawnMarker, rotation = markerRot})
+            objectBroken[index]:SetWorldRotation(markerRot)
         else
             objectRepaired[index] = World.SpawnAsset(TempRepaired, {parent = SpawnMarker, rotation = markerRot})
+            objectRepaired[index]:SetWorldRotation(markerRot)
         end
         index = index + 1
     end
@@ -59,8 +61,10 @@ end
 --@param Object obj
 --Destroys old Object and spawns in broken tank
 function SpawnRepairedTank(obj)
+    Task.Wait(RES.HUMAN_REPAIR_ANIMATION_TIME)
     objectBroken[#objectBroken + 1] =
-        World.SpawnAsset(TempRepaired, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
+        World.SpawnAsset(TempRepaired, {parent = obj.parent, rotation = obj.parent:GetRotation()})
+    objectBroken[#objectBroken]:SetWorldRotation(obj.parent:GetRotation())
     if Object.IsValid(obj) then
         obj:Destroy()
     end
@@ -69,13 +73,14 @@ end
 --@param Object obj
 --Destroys old Object and spawns in repaired tank
 function SpawnBrokenTank(obj)
+    Task.Wait(RES.WEREWOLF_DESTROY_ANIMATION_TIME)
     objectRepaired[#objectRepaired + 1] =
-        World.SpawnAsset(TempBroken, {parent = obj.parent, rotation = obj.parent:GetWorldRotation()})
+        World.SpawnAsset(TempBroken, {parent = obj.parent, rotation = obj.parent:GetRotation()})
+    objectRepaired[#objectRepaired]:SetWorldRotation(obj.parent:GetRotation())
     if Object.IsValid(obj) then
         obj:Destroy()
     end
 end
-
 
 function DestroyAllOxygenTanks()
     for i, value in pairs(objectBroken) do

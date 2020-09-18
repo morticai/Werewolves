@@ -14,7 +14,6 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 -- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
@@ -23,15 +22,22 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local REQUIRED_PLAYERS = COMPONENT_ROOT:GetCustomProperty("RequiredPlayers")
 local COUNTDOWN_TIME = COMPONENT_ROOT:GetCustomProperty("CountdownTime")
 
+local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
+
+local shouldStartGame = false
 -- Check user properties
 if REQUIRED_PLAYERS < 1 then
-    warn("RequiredPlayers must be positive")
-    REQUIRED_PLAYERS = 1
+	warn("RequiredPlayers must be positive")
+	REQUIRED_PLAYERS = 1
 end
 
 if COUNTDOWN_TIME < 0.0 then
-    warn("CountdownTime must be non-negative")
-    COUNTDOWN_TIME = 0.0
+	warn("CountdownTime must be non-negative")
+	COUNTDOWN_TIME = 0.0
+end
+
+function OnBeginInteracted(trigger, Player)
+	shouldStartGame = true
 end
 
 -- nil Tick(float)
@@ -41,10 +47,15 @@ function Tick(deltaTime)
 		return
 	end
 
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() == nil then
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() == nil and shouldStartGame then
 		local players = Game.GetPlayers()
 		if #players >= REQUIRED_PLAYERS then
 			ABGS.SetTimeRemainingInState(COUNTDOWN_TIME)
 		end
 	end
-end
+	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then
+		shouldStartGame = false
+	end
+end 
+
+Trigger.interactedEvent:Connect(OnBeginInteracted)

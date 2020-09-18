@@ -1,0 +1,1 @@
+﻿script.parent:RotateContinuous(Rotation.New(25, 50, 90))

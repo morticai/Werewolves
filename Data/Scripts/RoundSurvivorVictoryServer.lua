@@ -53,6 +53,9 @@ function Tick(deltaTime)
 			if GetShipHealth() <= 0 then
 				Game.SetTeamScore(RES.WEREWOLF_TEAM, 100)
 				winningTeam = RES.WEREWOLF_TEAM
+			elseif GetShipHealth() < 100 and ABGS.GetTimeRemainingInState() < 1 then
+				Game.SetTeamScore(RES.WEREWOLF_TEAM, 100)
+				winningTeam = RES.WEREWOLF_TEAM
 			elseif GetShipHealth() >= 100 then
 				Game.SetTeamScore(RES.HUMAN_TEAM, 100)
 				winningTeam = RES.HUMAN_TEAM

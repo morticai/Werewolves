@@ -18,7 +18,7 @@ local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
 -------------------------------------------------------------------------------
 local WerewolfMorphedState = {}
 local currentWerewolves, currentHumans = 0, 0
-local Spawns, currentSpawnPoint = {}, 0
+local Spawns, currentSpawnPoint, playerSpawnPoint = {}, 0, {}
 local isAllWerewolvesMorphed = false
 
 local SHOULD_DIE_JOINED_LATE = false -- TEMP
@@ -79,6 +79,7 @@ end
 -------------------------------------------------------------------------------
 function OnPlayerJoined(Player)
 	BalanceTeams(Player)
+	Player.canMount = false
 end
 
 function OnGameStateChanged(oldState, newState, hasDuration, endTime)
@@ -113,9 +114,12 @@ end
 
 function ChangePlayerToWerewolf(Player)
 	Player.team = RES.WEREWOLF_TEAM
-	CurrentWerewolfCount(1)
 	Player:Respawn()
-	Player:SetWorldPosition(Spawns[CurrentSpawnPointCount(1)]:GetWorldPosition())
+	CurrentWerewolfCount(1)
+	if playerSpawnPoint[Player] == nil then
+		playerSpawnPoint[Player] = CurrentSpawnPointCount(1)
+	end
+	Player:SetWorldPosition(Spawns[playerSpawnPoint[Player]]:GetWorldPosition())
 	UTIL.SpawnPlayerAbility(Player, RES.WEREWOLF_ABILITY)
 	WerewolfMorphedState[Player] = false
 end
@@ -123,9 +127,11 @@ end
 function ChangePlayerToHuman(Player)
 	Player.team = RES.HUMAN_TEAM
 	CurrentHumanCount(1)
+	playerSpawnPoint[Player] = CurrentSpawnPointCount(1)
 	Player:SetResource(RES.WEREWOLF_CHANGE_RES_NAME, RES.WEREWOLF_HUMAN_APPERANCE)
 	Player:Respawn()
-	Player:SetWorldPosition(Spawns[CurrentSpawnPointCount(1)]:GetWorldPosition())
+	Player:SetWorldPosition(Spawns[playerSpawnPoint[Player]]:GetWorldPosition())
+	UTIL.SpawnPlayerAbility(Player, RES.HUMAN_REPAIR_ABILITY)
 	Player.maxWalkSpeed = RES.HUMAN_SPEED
 end
 
@@ -151,7 +157,6 @@ function MorphPlayerToWerewolf(Player)
 		WerewolfMorphedState[Player] = true
 	end
 end
-
 
 -- TODO not being used atm, may need it in the future
 function MorphAllWerewolves()
